@@ -16,6 +16,8 @@ type Client struct {
 func (client *Client) ExecuteGETRequest(urlStr string) *http.Response {
 	// Create new, GET, request
 	req, _ := http.NewRequest("GET", urlStr, nil)
+	// Add the OData-Version header
+	req.Header.Add("OData-Version", "4.0")
 	// We'll be expecting a JSON formatted response, set Accept header accordingly
 	req.Header.Add("Accept", "application/json")
 	fmt.Println(req.Method, req.URL)
@@ -32,6 +34,8 @@ func (client *Client) ExecutePOSTRequest(urlStr, contentType, body string) *http
 	// Create new, POST, request
 	req, _ := http.NewRequest("POST", urlStr, strings.NewReader(body))
 	req.Header.Add("Content-Type", contentType)
+	// Add the OData-Version header
+	req.Header.Add("OData-Version", "4.0")
 	// We'll be expecting a JSON formatted response, set Accept header accordingly
 	req.Header.Add("Accept", "application/json")
 	fmt.Println(req.Method, req.URL)

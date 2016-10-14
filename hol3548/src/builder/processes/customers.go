@@ -21,7 +21,7 @@ type customerDimension struct {
 
 func (d *customerDimension) processResponse(responseBody []byte) (int, string) {
 	// Unmarshal the JSON response
-	res := northwind.CustomersResponse{}
+	res := northwind.CustomerCollectionResponse{}
 	err := json.Unmarshal(responseBody, &res)
 	if err != nil {
 		log.Fatal(err)

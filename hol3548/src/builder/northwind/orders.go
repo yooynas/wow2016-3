@@ -19,15 +19,10 @@ type Order struct {
 	Details    []OrderDetail `json:"Order_Details"`
 }
 
-// OrderCollection defines the structure of a collection of the Order entity
-type OrderCollection struct {
-	Orders []Order `json:"value"`
-}
-
-// OrdersResponse defines the structure of an odata compliant response wrapping a order collection
-type OrdersResponse struct {
-	OrderCollection
-	Context  string `json:"@odata.context"`
-	Count    int    `json:"@odata.count"`
-	NextLink string `json:"@odata.nextLink"`
+// OrderCollectionResponse defines the structure of an odata compliant response wrapping a order collection
+type OrderCollectionResponse struct {
+	Context  string  `json:"@odata.context"`
+	Count    int     `json:"@odata.count"`
+	Orders   []Order `json:"value"`
+	NextLink string  `json:"@odata.nextLink"`
 }

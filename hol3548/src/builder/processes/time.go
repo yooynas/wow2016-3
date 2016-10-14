@@ -20,7 +20,7 @@ func GenerateTimeDimension(client *odata.Client, datasourceServiceRootURL string
 	resp := client.ExecuteGETRequest(datasourceServiceRootURL + "Orders?$select=OrderDate&$orderby=OrderDate%20asc&$top=1")
 	defer resp.Body.Close()
 	responseBody, _ := ioutil.ReadAll(resp.Body)
-	res := northwind.OrdersResponse{}
+	res := northwind.OrderCollectionResponse{}
 	err := json.Unmarshal(responseBody, &res)
 	if err != nil {
 		log.Fatal(err)
@@ -31,7 +31,7 @@ func GenerateTimeDimension(client *odata.Client, datasourceServiceRootURL string
 	resp = client.ExecuteGETRequest(datasourceServiceRootURL + "Orders?$select=OrderDate&$orderby=OrderDate%20desc&$top=1")
 	defer resp.Body.Close()
 	responseBody, _ = ioutil.ReadAll(resp.Body)
-	res = northwind.OrdersResponse{}
+	res = northwind.OrderCollectionResponse{}
 	err = json.Unmarshal(responseBody, &res)
 	if err != nil {
 		log.Fatal(err)

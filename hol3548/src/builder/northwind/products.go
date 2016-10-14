@@ -13,15 +13,10 @@ type Category struct {
 	Products []Product `json:"Products"`
 }
 
-// CategoryCollection defines the structure of a collection of the Category entity
-type CategoryCollection struct {
+// CategoryCollectionResponse defines the structure of an odata compliant response wrapping a category collection
+type CategoryCollectionResponse struct {
+	Context    string     `json:"@odata.context"`
+	Count      int        `json:"@odata.count"`
 	Categories []Category `json:"value"`
-}
-
-// CategoriesResponse defines the structure of an odata compliant response wrapping a category collection
-type CategoriesResponse struct {
-	CategoryCollection
-	Context  string `json:"@odata.context"`
-	Count    int    `json:"@odata.count"`
-	NextLink string `json:"@odata.nextLink"`
+	NextLink   string     `json:"@odata.nextLink"`
 }

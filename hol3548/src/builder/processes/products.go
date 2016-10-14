@@ -20,7 +20,7 @@ type productDimension struct {
 
 func (d *productDimension) ProcessResponse(responseBody []byte) (int, string) {
 	// Unmarshal the JSON response
-	res := northwind.CategoriesResponse{}
+	res := northwind.CategoryCollectionResponse{}
 	err := json.Unmarshal(responseBody, &res)
 	if err != nil {
 		log.Fatal(err)

@@ -9,15 +9,10 @@ type Customer struct {
 	Country string
 }
 
-// CustomerCollection defines the structure of a collection of the Customer entity
-type CustomerCollection struct {
+// CustomerCollectionResponse defines the structure of an odata compliant response wrapping a customer collection
+type CustomerCollectionResponse struct {
+	Context   string     `json:"@odata.context"`
+	Count     int        `json:"@odata.count"`
 	Customers []Customer `json:"value"`
-}
-
-// CustomersResponse defines the structure of an odata compliant response wrapping a customer collection
-type CustomersResponse struct {
-	CustomerCollection
-	Context  string `json:"@odata.context"`
-	Count    int    `json:"@odata.count"`
-	NextLink string `json:"@odata.nextLink"`
+	NextLink  string     `json:"@odata.nextLink"`
 }

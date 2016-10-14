@@ -22,7 +22,7 @@ type employeeDimension struct {
 
 func (d *employeeDimension) processResponse(responseBody []byte) (int, string) {
 	// Unmarshal the JSON response
-	res := northwind.EmployeesResponse{}
+	res := northwind.EmployeeCollectionResponse{}
 	err := json.Unmarshal(responseBody, &res)
 	if err != nil {
 		log.Fatal(err)

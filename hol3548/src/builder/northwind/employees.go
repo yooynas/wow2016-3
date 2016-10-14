@@ -11,15 +11,10 @@ type Employee struct {
 	Country         string
 }
 
-// EmployeeCollection defines the structure of a collection of the Employee entity
-type EmployeeCollection struct {
+// EmployeeCollectionResponse defines the structure of an odata compliant response wrapping a employee collection
+type EmployeeCollectionResponse struct {
+	Context   string     `json:"@odata.context"`
+	Count     int        `json:"@odata.count"`
 	Employees []Employee `json:"value"`
-}
-
-// EmployeesResponse defines the structure of an odata compliant response wrapping a employee collection
-type EmployeesResponse struct {
-	EmployeeCollection
-	Context  string `json:"@odata.context"`
-	Count    int    `json:"@odata.count"`
-	NextLink string `json:"@odata.nextLink"`
+	NextLink  string     `json:"@odata.nextLink"`
 }

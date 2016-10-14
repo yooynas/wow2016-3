@@ -25,7 +25,7 @@ type ordersCubeDataLoad struct {
 
 func (c *ordersCubeDataLoad) processOrderData(responseBody []byte) (int, string) {
 	// Unmarshal the JSON response
-	res := northwind.OrdersResponse{}
+	res := northwind.OrderCollectionResponse{}
 	err := json.Unmarshal(responseBody, &res)
 	if err != nil {
 		log.Fatal(err)
@@ -128,6 +128,5 @@ func LoadOrderData(client *odata.Client, datasourceServiceRootURL, tm1ServiceRoo
 		timeDimension:     timeDimension,
 		measuresDimension: measuresDimension,
 	}
-
 	client.IterateCollection(datasourceServiceRootURL, "Orders?$select=CustomerID,EmployeeID,OrderDate&$expand=Order_Details($select=ProductID,UnitPrice,Quantity)", cubeLoadData.processOrderData)
 }

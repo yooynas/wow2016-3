@@ -1,11 +1,16 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
+	"net/http"
+	"net/http/cookiejar"
 	"os"
 
 	"github.com/hubert-heijkers/wow2016/hol3548/src/builder/helpers/odata"
+	proc "github.com/hubert-heijkers/wow2016/hol3548/src/builder/processes"
 	"github.com/hubert-heijkers/wow2016/hol3548/src/builder/tm1"
 	"github.com/joho/godotenv"
 )
@@ -29,16 +34,33 @@ var client *odata.Client
 func createDimension(dimension *tm1.Dimension) string {
 
 	// Create a JSON representation for the dimension
+	jDimension, _ := json.Marshal(dimension)
 
 	// POST the dimension to the TM1 server
 	fmt.Println(">> Create dimension", dimension.Name)
+	resp := client.ExecutePOSTRequest(tm1ServiceRootURL+"Dimensions", "application/json", string(jDimension))
 
 	// Validate that the dimension got created successfully
+	if resp.StatusCode != 201 {
+		defer resp.Body.Close()
+		body, _ := ioutil.ReadAll(resp.Body)
+		log.Fatal("Failed to create dimension '" + dimension.Name + "'. Server responded with:\r\n" + string(body))
+	} else {
+		resp.Body.Close()
+	}
 
 	// Secondly create an element attribute named 'Caption' of type 'string'
 	fmt.Println(">> Create 'Caption' attribute for dimension", dimension.Name)
+	resp = client.ExecutePOSTRequest(tm1ServiceRootURL+"Dimensions('"+dimension.Name+"')/Hierarchies('"+dimension.Name+"')/ElementAttributes", "application/json", `{"Name":"Caption","Type":"String"}`)
 
 	// Validate that the element attribute got created successfully as well
+	if resp.StatusCode != 201 {
+		defer resp.Body.Close()
+		body, _ := ioutil.ReadAll(resp.Body)
+		log.Fatal("Creating element attribute 'Caption' for dimension '" + dimension.Name + "' failed. Server responded with:\r\n" + string(body))
+	} else {
+		resp.Body.Close()
+	}
 
 	// Now that the caption attribute exists lets set the captions accordingly for this we'll
 	// simply update the }ElementAttributes_DIMENSION cube directly, updating the default value.
@@ -47,8 +69,16 @@ func createDimension(dimension *tm1.Dimension) string {
 	// Alternatively one could have updated the attribute values for elements one by one by
 	// POSTing to or PATCHing the LocalizedAttributes of the individual elements.
 	fmt.Println(">> Set 'Caption' attribute values for elements in dimension", dimension.Name)
+	resp = client.ExecutePOSTRequest(tm1ServiceRootURL+"Cubes('}ElementAttributes_"+dimension.Name+"')/tm1.Update", "application/json", dimension.GetAttributesJSON())
 
 	// Validate that the update executed successfully (by default an empty response is expected, hence the 204).
+	if resp.StatusCode != 200 && resp.StatusCode != 204 {
+		defer resp.Body.Close()
+		body, _ := ioutil.ReadAll(resp.Body)
+		log.Fatal("Setting Caption values for elements in dimension '" + dimension.Name + "' failed. Server responded with:\r\n" + string(body))
+	} else {
+		resp.Body.Close()
+	}
 
 	// Return the odata.id of the generated dimension
 	return "Dimensions('" + dimension.Name + "')"
@@ -58,11 +88,20 @@ func createDimension(dimension *tm1.Dimension) string {
 func createCube(name string, dimensionIds []string, rules string) string {
 
 	// Create a JSON representation for the cube
+	jCube, _ := json.Marshal(tm1.CubePost{Name: name, DimensionIds: dimensionIds, Rules: rules})
 
 	// POST the dimension to the TM1 server
 	fmt.Println(">> Create cube", name)
+	resp := client.ExecutePOSTRequest(tm1ServiceRootURL+"Cubes", "application/json", string(jCube))
 
 	// Validate that the dimension got created successfully
+	if resp.StatusCode != 201 {
+		defer resp.Body.Close()
+		body, _ := ioutil.ReadAll(resp.Body)
+		log.Fatal("Failed to create cube '" + name + "'. Server responded with:\r\n" + string(body))
+	} else {
+		resp.Body.Close()
+	}
 
 	// Return the odata.id of the generated cube
 	return "Cubes('" + name + "')"
@@ -78,19 +117,33 @@ func main() {
 	tm1ServiceRootURL = os.Getenv("TM1_SERVICE_ROOT_URL")
 
 	// Create the one and only http client we'll be using, with a cookie jar enabled to keep reusing our session
+	client = &odata.Client{}
+	cookieJar, _ := cookiejar.New(nil)
+	client.Jar = cookieJar
 
 	// Validate that the TM1 server is accessable by requesting the version of the server
+	req, _ := http.NewRequest("GET", tm1ServiceRootURL+"Configuration/ProductVersion/$value", nil)
 
 	// Since this is our initial request we'll have to provide a user name and password, also stored in the .env file, to authenticate
 	// Note: using authentication mode 1, TM1 authentication, which maps to basic authentication in HTTP[S]
+	req.SetBasicAuth(os.Getenv("TM1_USER"), os.Getenv("TM1_PASSWORD"))
 
 	// We'll expect text back in this case but we'll simply dump the content out and won't do any content type verification here
+	req.Header.Add("Accept", "*/*")
 
 	// Let's execute the request
+	resp, err := client.Do(req)
+	if err != nil {
+		// Execution of the request failed, log the error and terminate
+		log.Fatal(err)
+	}
 
 	// The body simply contains the version number of the server
+	version, _ := ioutil.ReadAll(resp.Body)
+	resp.Body.Close()
 
 	// which we'll simply dump to the console
+	fmt.Println("Using TM1 Server version", string(version))
 
 	// Note that as a result of this request a TM1SessionId cookie was added to the cookie jar which will automatically be
 	// reused on subsequent requests to our TM1 server, and therefore don't need to send the credentials over and over again.
@@ -98,10 +151,18 @@ func main() {
 	// Now let's build some Dimensions
 	// The definition of the dimension is based on data in the northwind database, a data source hosted on
 	// odata.org which, as one might have already gathered, can be queried using an OData compliant REST API.
+	var dimensionIds [5]string
+	dimensionIds[0] = createDimension(proc.GenerateProductDimension(client, datasourceServiceRootURL, productDimensionName))
+	dimensionIds[1] = createDimension(proc.GenerateCustomerDimension(client, datasourceServiceRootURL, customerDimensionName))
+	dimensionIds[2] = createDimension(proc.GenerateEmployeeDimension(client, datasourceServiceRootURL, employeeDimensionName))
+	dimensionIds[3] = createDimension(proc.GenerateTimeDimension(client, datasourceServiceRootURL, timeDimensionName))
+	dimensionIds[4] = createDimension(proc.GenerateMeasuresDimension(client, datasourceServiceRootURL, measuresDimensionName))
 
 	// Now that we have all our dimensions, let's create cube
+	createCube(ordersCubeName, dimensionIds[:], "UNDEFVALS;\nSKIPCHECK;\n\n['UnitPrice']=['Revenue']\\['Quantity'];\n\nFEEDERS;\n['Quantity']=>['UnitPrice'];")
 
 	// Load the data in the cube
+	proc.LoadOrderData(client, datasourceServiceRootURL, tm1ServiceRootURL, ordersCubeName, productDimensionName, customerDimensionName, employeeDimensionName, timeDimensionName, measuresDimensionName)
 
 	// And we are done!
 	fmt.Println(">> Done!")
