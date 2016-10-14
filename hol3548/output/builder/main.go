@@ -56,12 +56,13 @@ func createDimension(dimension *tm1.Dimension) string {
 	})
 	resp.Body.Close()
 
-	// Now that the caption attribute exists lets set the captions accordingly for this we'll
-	// simply update the }ElementAttributes_DIMENSION cube directly, updating the default value.
-	// Note: TM1 Server doesn't support passing the attribute values as part of the dimension
-	// definition just yet (should shortly), so for now this is the easiest way around that
-	// Alternatively one could have updated the attribute values for elements one by one by
-	// POSTing to or PATCHing the LocalizedAttributes of the individual elements.
+	// Now that the caption attribute exists lets set the captions accordingly for this
+	// we'll simply update the }ElementAttributes_DIMENSION cube directly, updating the
+	// default value. Note: TM1 Server doesn't support passing the attribute values as
+	// part of the dimension definition just yet (should shortly), so for now this is the
+	// easiest way around that. Alternatively, one could have updated the attribute
+	// values for elements one by one by POSTing to or PATCHing the LocalizedAttributes
+	// of the individual elements.
 	fmt.Println(">> Set 'Caption' attribute values for elements in dimension", dimension.Name)
 	resp = client.ExecutePOSTRequest(tm1ServiceRootURL+"Cubes('}ElementAttributes_"+dimension.Name+"')/tm1.Update", "application/json", dimension.GetAttributesJSON())
 
@@ -85,7 +86,7 @@ func createCube(name string, dimensionIds []string, rules string) string {
 	fmt.Println(">> Create cube", name)
 	resp := client.ExecutePOSTRequest(tm1ServiceRootURL+"Cubes", "application/json", string(jCube))
 
-	// Validate that the dimension got created successfully
+	// Validate that the cube got created successfully
 	odata.ValidateStatusCode(resp, 201, func() string {
 		return "Failed to create cube '" + name + "'."
 	})
