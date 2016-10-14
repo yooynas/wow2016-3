@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"strconv"
 
@@ -105,13 +104,10 @@ func (c *ordersCubeDataLoad) processOrderData(responseBody []byte) (int, string)
 	resp := c.client.ExecutePOSTRequest(c.tm1ServiceRootURL+"Cubes('"+c.cubeName+"')/tm1.Update", "application/json", jCellUpdates.String())
 
 	// Validate that the update executed successfully (by default an empty response is expected, hence the 204).
-	if resp.StatusCode != 200 && resp.StatusCode != 204 {
-		defer resp.Body.Close()
-		body, _ := ioutil.ReadAll(resp.Body)
-		log.Fatal("Loading data into cube '" + c.cubeName + "' failed. Server responded with:\r\n" + string(body))
-	} else {
-		resp.Body.Close()
-	}
+	odata.ValidateStatusCode(resp, 204, func() string {
+		return "Loading data into cube '" + c.cubeName + "'."
+	})
+	resp.Body.Close()
 
 	// Return the nextLink, if there is one
 	return res.Count, res.NextLink

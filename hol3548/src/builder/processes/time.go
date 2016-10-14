@@ -18,6 +18,9 @@ func GenerateTimeDimension(client *odata.Client, datasourceServiceRootURL string
 
 	// Grab the orderdate of the FIRST order, by order data, in the system
 	resp := client.ExecuteGETRequest(datasourceServiceRootURL + "Orders?$select=OrderDate&$orderby=OrderDate%20asc&$top=1")
+	odata.ValidateStatusCode(resp, 200, func() string {
+		return "Failed to retrieve first order date."
+	})
 	defer resp.Body.Close()
 	responseBody, _ := ioutil.ReadAll(resp.Body)
 	res := northwind.OrderCollectionResponse{}
@@ -29,6 +32,9 @@ func GenerateTimeDimension(client *odata.Client, datasourceServiceRootURL string
 
 	// Grab the orderdate of the LAST order, by order data, in the system
 	resp = client.ExecuteGETRequest(datasourceServiceRootURL + "Orders?$select=OrderDate&$orderby=OrderDate%20desc&$top=1")
+	odata.ValidateStatusCode(resp, 200, func() string {
+		return "Failed to retrieve last order date."
+	})
 	defer resp.Body.Close()
 	responseBody, _ = ioutil.ReadAll(resp.Body)
 	res = northwind.OrderCollectionResponse{}

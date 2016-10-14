@@ -97,3 +97,11 @@ func (client *Client) IterateCollection(datasourceServiceRootURL string, urlStr 
 		url = urlStr + "&$skip=" + strconv.Itoa(nSkip) + "&$top=10"
 	}
 }
+
+func ValidateStatusCode(resp *http.Response, statusCode int, logFmt func() string) {
+	if resp.StatusCode != statusCode {
+		defer resp.Body.Close()
+		body, _ := ioutil.ReadAll(resp.Body)
+		log.Fatal(logFmt() + "\r\nServer responded with:\r\n" + string(body))
+	}
+}

@@ -41,26 +41,20 @@ func createDimension(dimension *tm1.Dimension) string {
 	resp := client.ExecutePOSTRequest(tm1ServiceRootURL+"Dimensions", "application/json", string(jDimension))
 
 	// Validate that the dimension got created successfully
-	if resp.StatusCode != 201 {
-		defer resp.Body.Close()
-		body, _ := ioutil.ReadAll(resp.Body)
-		log.Fatal("Failed to create dimension '" + dimension.Name + "'. Server responded with:\r\n" + string(body))
-	} else {
-		resp.Body.Close()
-	}
+	odata.ValidateStatusCode(resp, 201, func() string {
+		return "Failed to create dimension '" + dimension.Name + "'."
+	})
+	resp.Body.Close()
 
 	// Secondly create an element attribute named 'Caption' of type 'string'
 	fmt.Println(">> Create 'Caption' attribute for dimension", dimension.Name)
 	resp = client.ExecutePOSTRequest(tm1ServiceRootURL+"Dimensions('"+dimension.Name+"')/Hierarchies('"+dimension.Name+"')/ElementAttributes", "application/json", `{"Name":"Caption","Type":"String"}`)
 
 	// Validate that the element attribute got created successfully as well
-	if resp.StatusCode != 201 {
-		defer resp.Body.Close()
-		body, _ := ioutil.ReadAll(resp.Body)
-		log.Fatal("Creating element attribute 'Caption' for dimension '" + dimension.Name + "' failed. Server responded with:\r\n" + string(body))
-	} else {
-		resp.Body.Close()
-	}
+	odata.ValidateStatusCode(resp, 201, func() string {
+		return "Creating element attribute 'Caption' for dimension '" + dimension.Name + "'."
+	})
+	resp.Body.Close()
 
 	// Now that the caption attribute exists lets set the captions accordingly for this we'll
 	// simply update the }ElementAttributes_DIMENSION cube directly, updating the default value.
@@ -72,13 +66,10 @@ func createDimension(dimension *tm1.Dimension) string {
 	resp = client.ExecutePOSTRequest(tm1ServiceRootURL+"Cubes('}ElementAttributes_"+dimension.Name+"')/tm1.Update", "application/json", dimension.GetAttributesJSON())
 
 	// Validate that the update executed successfully (by default an empty response is expected, hence the 204).
-	if resp.StatusCode != 200 && resp.StatusCode != 204 {
-		defer resp.Body.Close()
-		body, _ := ioutil.ReadAll(resp.Body)
-		log.Fatal("Setting Caption values for elements in dimension '" + dimension.Name + "' failed. Server responded with:\r\n" + string(body))
-	} else {
-		resp.Body.Close()
-	}
+	odata.ValidateStatusCode(resp, 204, func() string {
+		return "Setting Caption values for elements in dimension '" + dimension.Name + "'."
+	})
+	resp.Body.Close()
 
 	// Return the odata.id of the generated dimension
 	return "Dimensions('" + dimension.Name + "')"
@@ -95,13 +86,10 @@ func createCube(name string, dimensionIds []string, rules string) string {
 	resp := client.ExecutePOSTRequest(tm1ServiceRootURL+"Cubes", "application/json", string(jCube))
 
 	// Validate that the dimension got created successfully
-	if resp.StatusCode != 201 {
-		defer resp.Body.Close()
-		body, _ := ioutil.ReadAll(resp.Body)
-		log.Fatal("Failed to create cube '" + name + "'. Server responded with:\r\n" + string(body))
-	} else {
-		resp.Body.Close()
-	}
+	odata.ValidateStatusCode(resp, 201, func() string {
+		return "Failed to create cube '" + name + "'."
+	})
+	resp.Body.Close()
 
 	// Return the odata.id of the generated cube
 	return "Cubes('" + name + "')"
