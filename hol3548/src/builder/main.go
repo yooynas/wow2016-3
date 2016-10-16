@@ -82,23 +82,29 @@ func main() {
 
 	// Validate that the TM1 server is accessable by requesting the version of the server
 
-	// Since this is our initial request we'll have to provide a user name and password, also stored in the .env file, to authenticate
-	// Note: using authentication mode 1, TM1 authentication, which maps to basic authentication in HTTP[S]
+	// Since this is our initial request we'll have to provide a user name and
+	// password, also conveniently stored in the environment variables, to authenticate.
+	// Note: using authentication mode 1, TM1 authentication, which maps to basic
+	// authentication in HTTP[S]
 
-	// We'll expect text back in this case but we'll simply dump the content out and won't do any content type verification here
+	// We'll expect text back in this case but we'll simply dump the content out and
+	// won't do any content type verification here
 
 	// Let's execute the request
+
+	// Validate that the request executed successfully
 
 	// The body simply contains the version number of the server
 
 	// which we'll simply dump to the console
 
-	// Note that as a result of this request a TM1SessionId cookie was added to the cookie jar which will automatically be
-	// reused on subsequent requests to our TM1 server, and therefore don't need to send the credentials over and over again.
+	// Note that as a result of this request a TM1SessionId cookie was added to the cookie
+	// jar which will automatically be reused on subsequent requests to our TM1 server,
+	// and therefore don't need to send the credentials over and over again.
 
-	// Now let's build some Dimensions
-	// The definition of the dimension is based on data in the northwind database, a data source hosted on
-	// odata.org which, as one might have already gathered, can be queried using an OData compliant REST API.
+	// Now let's build some Dimensions. The definition of the dimension is based on data
+	// in the NorthWind database, a data source hosted on odata.org which can be queried
+	// using its OData complaint REST API.
 
 	// Now that we have all our dimensions, let's create cube
 
