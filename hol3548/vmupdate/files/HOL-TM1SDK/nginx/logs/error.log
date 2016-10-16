@@ -1,0 +1,1 @@
+2016/10/16 16:52:31 [error] 5620#2980: *1 CreateFile() "C:\HOL-TM1SDK\nginx/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: tm1server, request: "GET /favicon.ico HTTP/1.1", host: "tm1server:9090", referrer: "http://tm1server:9090/"
