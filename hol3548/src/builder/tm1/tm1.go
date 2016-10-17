@@ -2,6 +2,7 @@ package tm1
 
 import (
 	"bytes"
+	"encoding/json"
 )
 
 // Dimension defines the structure of a single Dimension entity in the TM1 Server schema
@@ -97,4 +98,26 @@ type CubePost struct {
 	Name         string
 	DimensionIds []string `json:"Dimensions@odata.bind"`
 	Rules        string   `json:",omitempty"`
+}
+
+// TransactionLogEntry defines the structure of A single TransactionLogEntry entity
+type TransactionLogEntry struct {
+	ChangeSetID     string
+	TimeStamp       string // should be time.Time but because the seconds are omitted if 0 Go's time parser doesn't like them.
+	ReplicationTime string // should be time.Time but because the seconds are omitted if 0 Go's time parser doesn't like them.
+	User            string
+	Cube            string
+	Tuple           []string
+	OldValue        json.RawMessage
+	NewValue        json.RawMessage
+	StatusMessage   string
+}
+
+// TransactionLogEntriesResponse defines the structure of an odata compliant response wrapping a TransactionLogEntry collection
+type TransactionLogEntriesResponse struct {
+	Context               string                `json:"@odata.context"`
+	Count                 int                   `json:"@odata.count"`
+	TransactionLogEntries []TransactionLogEntry `json:"value"`
+	NextLink              string                `json:"@odata.nextLink"`
+	DeltaLink             string                `json:"@odata.deltaLink"`
 }
