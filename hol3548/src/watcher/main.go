@@ -108,5 +108,5 @@ func main() {
 
 	// Track the collection of transaction log entries. This will query the existing entries and then cause
 	// the server to query the delta of the collection (read: just the changes) after a defined duration.
-	client.TrackCollection(tm1ServiceRootURL, "TransactionLogEntries?$filter=Cube%20ne%20null%20and%20Cube%20eq%20'"+url.QueryEscape(ordersCubeName)+"'", 1*time.Second, processTransactionLogEntries)
+	client.TrackCollection(tm1ServiceRootURL, "TransactionLogEntries?$filter=Cube%20eq%20'"+url.QueryEscape(ordersCubeName)+"'", 1*time.Second, processTransactionLogEntries)
 }
