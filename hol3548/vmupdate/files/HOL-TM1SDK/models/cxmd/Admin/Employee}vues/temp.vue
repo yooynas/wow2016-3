@@ -1,0 +1,113 @@
+﻿389,100
+390,"temp"
+370,0
+361,1
+362,1
+363,0
+364,0
+365,
+366,
+367,0
+376,1
+375,b:0.#########G|0|
+374,6
+7,Version
+6,Default
+7,Year
+270,2
+2015
+2016
+274,Financial Year
+275,
+281,0
+282,
+7,Employee
+270,1
+555
+274,Full Name
+275,
+281,0
+282,
+7,Currency
+6,Default
+7,Department
+6,Default
+7,Region
+270,9
+13
+3
+4
+5
+6
+7
+8
+11
+12
+274,Description
+275,
+281,0
+282,
+360,1
+7,Employee Measure
+270,7
+Enter Full Time Base Salary
+Pay Method
+Full Time Base Salary
+FTE
+Start Date
+End Date
+Base Salary
+274,
+275,
+281,0
+282,
+371,1
+7,Period
+270,14
+Year
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+Year_Enter
+274,Short Description
+275,
+281,0
+282,
+373,6
+2,2
+2,2016
+1,555
+1,Local
+2,0
+2,3
+372,0
+372,00
+384,0
+385,0
+377,4
+842
+237
+1635
+768
+378,0
+382,255
+379,8
+0
+0
+0
+0
+0
+0
+0
+0
+11,20160722050149
+381,0

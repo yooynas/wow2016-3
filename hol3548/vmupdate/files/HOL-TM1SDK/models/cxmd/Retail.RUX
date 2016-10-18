@@ -1,0 +1,64 @@
+﻿FORMAT==100
+SKIPCHECK;
+FEEDSTRINGS;
+#UNDEFVALS;
+
+# Only do planning calculations for the year and version that needs planning, as set in the System Info cube
+# Note that in the System Info cube, for the Budget Version you need to enter the version description (e.g. Actual, Budget etc, not the code number)
+# In the System Info cube, for the Budget Version, enter the principal element name e.g. 2013, not the alias 2012/2013
+
+# Local currency
+['Local']= N:
+  IF(AttrS('Version', !Version, 'Description') @= DB('System Info','Budget Version','String') & !Year @= DB('System Info','Budget Year','String'),
+    CONTINUE,
+    STET
+  );
+
+#------------Sales Units drives Sales Amount------------------------------
+['Sales Amount', 'Local']= N:
+  ['Sales Units'] *
+  DB('Product',!Version,!Year,!Currency,!Region,!Product,'List Price');
+
+#------------Sales Units drives Cost of sales--------------------------------------
+['Product Standard Cost', 'Local']= N:
+  ['Sales Units'] *
+  DB('Product',!Version,!Year,!Currency,!Region,!Product,'Standard Cost');
+
+#------------Sales Units drives Freight-------------------------------------------------------------------------------------------------------
+# Freight is based on the product type which is the parent of freight.
+# The parent is held in the attribute 'Hierarchy_All Products By Category_Parent'
+# which was populated using Bedrock.Dim.Attr.Create.FromHierarchy
+['Freight', 'Local']= N:
+  ['Sales Units'] *
+  DB('Product Type by Region',!Version,!Year,!Period,!Currency,!Region, AttrS('Product', !Product, 'Hierarchy_All Products By Category_Parent'), 'Freight Rate');
+
+### FOREIGN EXCHANGE RULES
+#------------Currency Conversion----------------------------------------------
+# Use the Attribute of the region to work out what the local currency is
+# Use the Currency dimension as "Currency To" in the FX cube
+
+[]= N:
+  IF(!Currency @= 'Local',
+    STET
+    ,
+    ['Local']
+    *
+    DB('Currency Exchange Rates',!Version,!Year,!Period,
+          AttrS('Region', !Region, 'Currency'),
+          !Currency,'Spot Rate')
+  );
+
+FEEDERS;
+# Currency Conversion
+['Local'] => ['All Currencies'];
+
+# Sales feeders for Local
+['Sales Units', 'Local']=> ['Sales Amount'];
+['Sales Units', 'Local']=> ['Freight'];
+
+# FEED GENERAL LEDGER
+['Local','Sales Amount']=>
+  DB('General Ledger', !Version, !Year, !Period, !Currency, !Region, 'Sales and Marketing', '4200', 'Amount');
+
+['Local','Freight']=>
+  DB('General Ledger', !Version, !Year, !Period, !Currency, !Region, 'Sales and Marketing', 'Freight', 'Amount');

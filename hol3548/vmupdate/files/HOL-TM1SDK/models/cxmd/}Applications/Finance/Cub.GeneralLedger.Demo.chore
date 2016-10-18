@@ -1,0 +1,4 @@
+﻿FILE_FORMAT=100
+ENTRYNAME=Cub.GeneralLedger.Demo
+ENTRYTYPE=chore
+ENTRYREFERENCE=TM1:///CHORE/PUBLIC/Cub.GeneralLedger.Demo

@@ -1,0 +1,23 @@
+﻿FORMAT==100
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+UNDEFVALS;
+#EndRegion
+#If Budget Calculation Method is Monthly, Budget Spreading is unnecessary, therefore put "Not Applied" and lock from editing cell
+
+['Bgt Spread Method'] = S:
+  IF(DB('Planning Assumptions', !Version, !Year, !Department, !Account, 'Bgt Calc Method') @='Mthly % to Sales LY'
+       %
+       DB('Planning Assumptions', !Version, !Year, !Department, !Account, 'Bgt Calc Method') @='Mthly % to Sales by Input'
+       %
+       DB('Planning Assumptions', !Version, !Year, !Department, !Account, 'Bgt Calc Method') @='Mthly % Growth',
+
+       'Not Applied',
+
+       STET
+  );
+
+FEEDERS;
+
+

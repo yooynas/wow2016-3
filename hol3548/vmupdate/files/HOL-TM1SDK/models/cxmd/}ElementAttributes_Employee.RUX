@@ -1,0 +1,6 @@
+﻿FORMAT==100
+['Region Code']=S:DIMNM('Region',
+DIMIX('Region',ATTRS('Employee',!Employee,'Region')));
+
+['Department Code']=S:DIMNM('Department',
+DIMIX('Department',ATTRS('Employee',!Employee,'Department Name')));

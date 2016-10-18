@@ -1,0 +1,34 @@
+﻿FORMAT==100
+SKIPCHECK;
+FEEDSTRINGS;
+UNDEFVALS;
+
+#------------Average Price-------------------------------
+['Local','Avg Selling Price'] = ['Sales Amount']\['Qty'];
+
+### FOREIGN EXCHANGE RULES
+#------------Currency Conversion----------------------------------------------
+# Use the Attribute of the region to work out what the local currency is
+# Use the Currency dimension as "Currency To" in the FX cube
+
+[]= N:
+  IF(!Currency @= 'Local',
+    STET
+    ,
+    ['Local']
+    *
+    DB('Currency Exchange Rates',!Version,!Year,!Period,
+          AttrS('Region', !Region, 'Currency'),
+          !Currency,'Spot Rate')
+  );
+
+FEEDERS;
+# Price
+['Sales Amount','Local']=>['Avg Selling Price'];
+
+# Currency Conversion
+['Local'] => ['All Currencies'];
+
+# FEED GENERAL LEDGER CUBE
+['Local','Sales Amount']=>
+  DB('General Ledger', !Version, !Year, !Period, !Currency, !Region, 'Sales and Marketing', '4500', 'Amount');

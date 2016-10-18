@@ -1,0 +1,692 @@
+﻿5276   []   INFO   2016-10-18 08:30:18.491   TM1.Server   Data Directory: c:\hol-tm1sdk\canvas\cxmd
+5276   []   INFO   2016-10-18 08:30:18.495   TM1.Server   Admin Host: VCLASSBASE
+5276   []   INFO   2016-10-18 08:30:18.495   TM1.Server   Logging Directory: c:\hol-tm1sdk\canvas\cxmd
+5276   []   INFO   2016-10-18 08:30:18.495   TM1.Server   Raw Store Directory:c:\hol-tm1sdk\canvas\cxmd
+5276   []   INFO   2016-10-18 08:30:18.495   TM1.Server   Configuration Directory: C:\HOL-TM1SDK\canvas\cxmd
+5276   []   INFO   2016-10-18 08:30:18.495   TM1.Server   Port: 16020
+5276   []   INFO   2016-10-18 08:30:18.495   TM1.Server   Client Message Port: Dynamic
+5276   []   INFO   2016-10-18 08:30:18.495   TM1.Server   HTTP Port: 16030
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   Admin Server Certificate Authority: C:\Program Files\ibm\cognos\tm1_64\bin64\ssl\applixca.pem
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   Export Admin Server Certificate: 0
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   Admin Server SSL Cert ID: tm1adminserver
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   IP Version: ipv4
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   SSL Mode: 1
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   Export Server Certificate: 0
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   SSL Certificate: C:\Program Files\ibm\cognos\tm1_64\bin64\ssl\tm1svrcert.pem
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   Certificate Authority: applixca.pem
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   Client Export Server Certificate: 0
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   DH 512 File: C:\Program Files\ibm\cognos\tm1_64\bin64\ssl\dh512.pem
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   DH 1024 File: C:\Program Files\ibm\cognos\tm1_64\bin64\ssl\dh1024.pem
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   DH 2048 File: C:\Program Files\ibm\cognos\tm1_64\bin64\ssl\dh2048.pem
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   Private Key Password File: C:\Program Files\ibm\cognos\tm1_64\bin64\ssl\tm1cipher.dat
+5276   []   INFO   2016-10-18 08:30:18.497   TM1.Server   Password Key File: C:\Program Files\ibm\cognos\tm1_64\bin64\ssl\tm1key.dat
+5276   []   INFO   2016-10-18 08:30:18.498   TM1.Server   Security Mode: 1
+5276   []   INFO   2016-10-18 08:30:18.498   TM1.Server   Use Generic Login Connect Error: 0
+5276   []   INFO   2016-10-18 08:30:18.498   TM1.Server   Start time: Tue Oct 18 2016     04:30:18
+5276   []   INFO   2016-10-18 08:30:19.298   TM1.Server    The server will use Parallel Interaction.
+5276   []   INFO   2016-10-18 08:30:19.313   TM1.Server    Server threading mode is thread per connection.
+5276   []   INFO   2016-10-18 08:30:19.313   TM1.Server    Client Message Port does not accept Tm1Top connections.
+5436   []   INFO   2016-10-18 08:30:19.719   TM1.Server   Dynamic Client Message Port: 57477
+5276   []   INFO   2016-10-18 08:30:19.721   TM1.Server    MTQ is enabled with 4 threads
+5276   []   INFO   2016-10-18 08:30:19.723   TM1.Server   Using javaextensions.policy from C:\Program Files\ibm\cognos\tm1_64\bin64\..\configuration\javaextensions.policy
+5276   []   INFO   2016-10-18 08:30:19.729   TM1.Server   Creating Java Virtual Machine with arguments:
+5276   []   INFO   2016-10-18 08:30:19.729   TM1.Server   -Djava.security.policy=C:\Program Files\ibm\cognos\tm1_64\bin64\..\configuration\javaextensions.policy
+5276   []   INFO   2016-10-18 08:30:19.729   TM1.Server   -Djava.class.path=java_classes;C:\Program Files\ibm\cognos\tm1_64\bin64\javatiapi.jar;C:\Program Files\ibm\cognos\tm1_64\bin64\tm1javaticore.jar
+5276   []   INFO   2016-10-18 08:30:19.729   TM1.Server            end JVM args
+5464   []   INFO   2016-10-18 08:30:20.466   TM1.Server   --------------------Session Start--------------------
+5464   []   INFO   2016-10-18 08:30:20.466   TM1.Server   TM1 Build Number:  10.2.20600.66
+5464   []   INFO   2016-10-18 08:30:20.752   TM1.Cube    Done loading header for cube Currency Exchange Rates
+5464   []   INFO   2016-10-18 08:30:20.753   TM1.Cube    Done loading header for cube Employee
+5464   []   INFO   2016-10-18 08:30:20.753   TM1.Cube    Done loading header for cube General Ledger
+5464   []   INFO   2016-10-18 08:30:20.754   TM1.Cube    Done loading header for cube Planning Assumptions
+5464   []   INFO   2016-10-18 08:30:20.754   TM1.Cube    Done loading header for cube Product Type by Region
+5464   []   INFO   2016-10-18 08:30:20.754   TM1.Cube    Done loading header for cube Product
+5464   []   INFO   2016-10-18 08:30:20.754   TM1.Cube    Done loading header for cube Regional Assumptions
+5464   []   INFO   2016-10-18 08:30:20.755   TM1.Cube    Done loading header for cube Retail
+5464   []   INFO   2016-10-18 08:30:20.755   TM1.Cube    Done loading header for cube Sales Quota
+5464   []   INFO   2016-10-18 08:30:20.755   TM1.Cube    Done loading header for cube System Info
+5464   []   INFO   2016-10-18 08:30:20.756   TM1.Cube    Done loading header for cube Test
+5464   []   INFO   2016-10-18 08:30:20.756   TM1.Cube    Done loading header for cube Time
+5464   []   INFO   2016-10-18 08:30:20.756   TM1.Cube    Done loading header for cube Wholesale
+5464   []   INFO   2016-10-18 08:30:20.757   TM1.Cube    Done loading header for cube }Capabilities
+5464   []   INFO   2016-10-18 08:30:20.757   TM1.Cube    Done loading header for cube }CellAnnotations_General Ledger
+5464   []   INFO   2016-10-18 08:30:20.773   TM1.Cube    Done loading header for cube }CellSecurity_General Ledger
+5464   []   INFO   2016-10-18 08:30:20.774   TM1.Cube    Done loading header for cube }ChoreSecurity
+5464   []   INFO   2016-10-18 08:30:20.774   TM1.Cube    Done loading header for cube }ClientCAMAssociatedGroups
+5464   []   INFO   2016-10-18 08:30:20.775   TM1.Cube    Done loading header for cube }ClientGroups
+5464   []   INFO   2016-10-18 08:30:20.775   TM1.Cube    Done loading header for cube }ClientProperties
+5464   []   INFO   2016-10-18 08:30:20.775   TM1.Cube    Done loading header for cube }ClientSettings
+5464   []   INFO   2016-10-18 08:30:20.776   TM1.Cube    Done loading header for cube }CubeAttributes
+5464   []   INFO   2016-10-18 08:30:20.776   TM1.Cube    Done loading header for cube }CubeCaptions
+5464   []   INFO   2016-10-18 08:30:20.777   TM1.Cube    Done loading header for cube }CubeDrill_Employee
+5464   []   INFO   2016-10-18 08:30:20.777   TM1.Cube    Done loading header for cube }CubeDrill_General Ledger
+5464   []   INFO   2016-10-18 08:30:20.777   TM1.Cube    Done loading header for cube }CubeProperties
+5464   []   INFO   2016-10-18 08:30:20.778   TM1.Cube    Done loading header for cube }CubeSecurity
+5464   []   INFO   2016-10-18 08:30:20.778   TM1.Cube    Done loading header for cube }CubeSecurityProperties
+5464   []   INFO   2016-10-18 08:30:20.778   TM1.Cube    Done loading header for cube }DimensionAttributes
+5464   []   INFO   2016-10-18 08:30:20.778   TM1.Cube    Done loading header for cube }DimensionCaptions
+5464   []   INFO   2016-10-18 08:30:20.778   TM1.Cube    Done loading header for cube }DimensionProperties
+5464   []   INFO   2016-10-18 08:30:20.779   TM1.Cube    Done loading header for cube }DimensionSecurity
+5464   []   INFO   2016-10-18 08:30:20.779   TM1.Cube    Done loading header for cube }ElementAttributes_Account
+5464   []   INFO   2016-10-18 08:30:20.779   TM1.Cube    Done loading header for cube }ElementAttributes_Currency Measure
+5464   []   INFO   2016-10-18 08:30:20.780   TM1.Cube    Done loading header for cube }ElementAttributes_Currency To
+5464   []   INFO   2016-10-18 08:30:20.780   TM1.Cube    Done loading header for cube }ElementAttributes_Currency
+5464   []   INFO   2016-10-18 08:30:20.780   TM1.Cube    Done loading header for cube }ElementAttributes_Day
+5464   []   INFO   2016-10-18 08:30:20.780   TM1.Cube    Done loading header for cube }ElementAttributes_Department
+5464   []   INFO   2016-10-18 08:30:20.781   TM1.Cube    Done loading header for cube }ElementAttributes_Destination
+5464   []   INFO   2016-10-18 08:30:20.781   TM1.Cube    Done loading header for cube }ElementAttributes_Employee Measure
+5464   []   INFO   2016-10-18 08:30:20.781   TM1.Cube    Done loading header for cube }ElementAttributes_Employee
+5464   []   INFO   2016-10-18 08:30:20.782   TM1.Cube    Done loading header for cube }ElementAttributes_General Ledger Measure
+5464   []   INFO   2016-10-18 08:30:20.782   TM1.Cube    Done loading header for cube }ElementAttributes_month
+5464   []   INFO   2016-10-18 08:30:20.782   TM1.Cube    Done loading header for cube }ElementAttributes_New Dimension
+5464   []   INFO   2016-10-18 08:30:20.783   TM1.Cube    Done loading header for cube }ElementAttributes_Organization
+5464   []   INFO   2016-10-18 08:30:20.783   TM1.Cube    Done loading header for cube }ElementAttributes_Period
+5464   []   INFO   2016-10-18 08:30:20.783   TM1.Cube    Done loading header for cube }ElementAttributes_Planning Measure
+5464   []   INFO   2016-10-18 08:30:20.784   TM1.Cube    Done loading header for cube }ElementAttributes_Product Measure
+5464   []   INFO   2016-10-18 08:30:20.784   TM1.Cube    Done loading header for cube }ElementAttributes_Product
+5464   []   INFO   2016-10-18 08:30:20.784   TM1.Cube    Done loading header for cube }ElementAttributes_Promotion
+5464   []   INFO   2016-10-18 08:30:20.785   TM1.Cube    Done loading header for cube }ElementAttributes_Region with Local Descriptions
+5464   []   INFO   2016-10-18 08:30:20.785   TM1.Cube    Done loading header for cube }ElementAttributes_Region
+5464   []   INFO   2016-10-18 08:30:20.785   TM1.Cube    Done loading header for cube }ElementAttributes_Reseller
+5464   []   INFO   2016-10-18 08:30:20.786   TM1.Cube    Done loading header for cube }ElementAttributes_Retail Measure
+5464   []   INFO   2016-10-18 08:30:20.786   TM1.Cube    Done loading header for cube }ElementAttributes_Sales Measure
+5464   []   INFO   2016-10-18 08:30:20.786   TM1.Cube    Done loading header for cube }ElementAttributes_Sales Quota Measure
+5464   []   INFO   2016-10-18 08:30:20.786   TM1.Cube    Done loading header for cube }ElementAttributes_Sales Reason
+5464   []   INFO   2016-10-18 08:30:20.787   TM1.Cube    Done loading header for cube }ElementAttributes_Sales Territory To Region Lookup
+5464   []   INFO   2016-10-18 08:30:20.787   TM1.Cube    Done loading header for cube }ElementAttributes_Sales Territory
+5464   []   INFO   2016-10-18 08:30:20.787   TM1.Cube    Done loading header for cube }ElementAttributes_Scenario
+5464   []   INFO   2016-10-18 08:30:20.787   TM1.Cube    Done loading header for cube }ElementAttributes_System Info Parameter
+5464   []   INFO   2016-10-18 08:30:20.788   TM1.Cube    Done loading header for cube }ElementAttributes_Version
+5464   []   INFO   2016-10-18 08:30:20.788   TM1.Cube    Done loading header for cube }ElementAttributes_Year
+5464   []   INFO   2016-10-18 08:30:20.788   TM1.Cube    Done loading header for cube }ElementAttributes_}Clients
+5464   []   INFO   2016-10-18 08:30:20.789   TM1.Cube    Done loading header for cube }ElementAttributes_}Cultures
+5464   []   INFO   2016-10-18 08:30:20.789   TM1.Cube    Done loading header for cube }ElementAttributes_}DeployedLinkRecord
+5464   []   INFO   2016-10-18 08:30:20.789   TM1.Cube    Done loading header for cube }ElementAttributes_}formatTesterDimensionA
+5464   []   INFO   2016-10-18 08:30:20.789   TM1.Cube    Done loading header for cube }ElementAttributes_}formatTesterDimensionB
+5464   []   INFO   2016-10-18 08:30:20.790   TM1.Cube    Done loading header for cube }ElementAttributes_}Groups
+5464   []   INFO   2016-10-18 08:30:20.790   TM1.Cube    Done loading header for cube }ElementAttributes_}Links
+5464   []   INFO   2016-10-18 08:30:20.790   TM1.Cube    Done loading header for cube }ElementAttributes_}Modeling
+5464   []   INFO   2016-10-18 08:30:20.790   TM1.Cube    Done loading header for cube }ElementAttributes_}tp_applications
+5464   []   INFO   2016-10-18 08:30:20.791   TM1.Cube    Done loading header for cube }ElementAttributes_}tp_config
+5464   []   INFO   2016-10-18 08:30:20.791   TM1.Cube    Done loading header for cube }ElementAttributes_}tp_system_config
+5464   []   INFO   2016-10-18 08:30:20.791   TM1.Cube    Done loading header for cube }ElementCaptions
+5464   []   INFO   2016-10-18 08:30:20.791   TM1.Cube    Done loading header for cube }ElementCaptionsByDimension
+5464   []   INFO   2016-10-18 08:30:20.792   TM1.Cube    Done loading header for cube }ElementSecurity_Account
+5464   []   INFO   2016-10-18 08:30:20.792   TM1.Cube    Done loading header for cube }ElementSecurity_Currency From
+5464   []   INFO   2016-10-18 08:30:20.792   TM1.Cube    Done loading header for cube }ElementSecurity_Currency Measure
+5464   []   INFO   2016-10-18 08:30:20.793   TM1.Cube    Done loading header for cube }ElementSecurity_Employee Measure
+5464   []   INFO   2016-10-18 08:30:20.793   TM1.Cube    Done loading header for cube }ElementSecurity_Organization
+5464   []   INFO   2016-10-18 08:30:20.793   TM1.Cube    Done loading header for cube }ElementSecurity_Planning Measure
+5464   []   INFO   2016-10-18 08:30:20.793   TM1.Cube    Done loading header for cube }ElementSecurity_Product Measure
+5464   []   INFO   2016-10-18 08:30:20.794   TM1.Cube    Done loading header for cube }ElementSecurity_Retail Measure
+5464   []   INFO   2016-10-18 08:30:20.794   TM1.Cube    Done loading header for cube }ElementSecurity_Version
+5464   []   INFO   2016-10-18 08:30:20.794   TM1.Cube    Done loading header for cube }ElementSecurity_Year
+5464   []   INFO   2016-10-18 08:30:20.794   TM1.Cube    Done loading header for cube }ElementSecurity_}tp_applications
+5464   []   INFO   2016-10-18 08:30:20.795   TM1.Cube    Done loading header for cube }formatTesterCube
+5464   []   INFO   2016-10-18 08:30:20.795   TM1.Cube    Done loading header for cube }HierarchyProperties
+5464   []   INFO   2016-10-18 08:30:20.795   TM1.Cube    Done loading header for cube }PickList_General Ledger
+5464   []   INFO   2016-10-18 08:30:20.796   TM1.Cube    Done loading header for cube }ProcessSecurity
+5464   []   INFO   2016-10-18 08:30:20.796   TM1.Cube    Done loading header for cube }StatsByChore
+5464   []   INFO   2016-10-18 08:30:20.796   TM1.Cube    Done loading header for cube }StatsByClient
+5464   []   INFO   2016-10-18 08:30:20.796   TM1.Cube    Done loading header for cube }StatsByCube
+5464   []   INFO   2016-10-18 08:30:20.797   TM1.Cube    Done loading header for cube }StatsByCubeByClient
+5464   []   INFO   2016-10-18 08:30:20.797   TM1.Cube    Done loading header for cube }StatsByProcess
+5464   []   INFO   2016-10-18 08:30:20.797   TM1.Cube    Done loading header for cube }StatsForServer
+5464   []   INFO   2016-10-18 08:30:20.798   TM1.Cube    Done loading header for cube }SysControlCube
+5464   []   INFO   2016-10-18 08:30:20.799   TM1.Cube    Done loading header for cube }SysControlDimension
+5464   []   INFO   2016-10-18 08:30:20.800   TM1.Cube    Done loading header for cube }tp_application_cubes
+5464   []   INFO   2016-10-18 08:30:20.800   TM1.Cube    Done loading header for cube }tp_central_application_state
+5464   []   INFO   2016-10-18 08:30:20.801   TM1.Cube    Done loading header for cube }tp_process_errors
+5464   []   INFO   2016-10-18 08:30:20.801   TM1.Cube    Done loading header for cube }tp_semaphore
+5464   []   INFO   2016-10-18 08:30:20.801   TM1.Dimension    Loading dimension }DimensionProperties
+5464   []   INFO   2016-10-18 08:30:20.801   TM1.Cube    Loading body for cube }DimensionProperties
+5464   []   INFO   2016-10-18 08:30:20.802   TM1.Cube    Done loading body for cube }DimensionProperties
+5464   []   INFO   2016-10-18 08:30:20.803   TM1.Dimension    Loading dimension }CubeProperties
+5464   []   INFO   2016-10-18 08:30:20.804   TM1.Dimension    Loading dimension }CubeAttributes
+5464   []   INFO   2016-10-18 08:30:20.804   TM1.Dimension    Loading dimension }Groups
+5464   []   INFO   2016-10-18 08:30:20.804   TM1.Dimension    Loading dimension }CubeSecurityProperties
+5464   []   INFO   2016-10-18 08:30:20.804   TM1.Dimension    Loading dimension }DimensionAttributes
+5464   []   INFO   2016-10-18 08:30:20.804   TM1.Dimension    Loading dimension }Hierarchies
+5464   []   INFO   2016-10-18 08:30:20.804   TM1.Dimension    Loading dimension }HierarchyProperties
+5464   []   INFO   2016-10-18 08:30:20.805   TM1.Cube    Loading body for cube }CubeProperties
+5464   []   INFO   2016-10-18 08:30:20.805   TM1.Cube    Done loading body for cube }CubeProperties
+5464   []   INFO   2016-10-18 08:30:20.805   TM1.Cube    Loading body for cube }CubeAttributes
+5276   []   INFO   2016-10-18 08:30:20.806   TM1.Process   [com.ibm.cognos.tm1.jos.Main] - JavaTI started
+5464   []   INFO   2016-10-18 08:30:20.829   TM1.Cube    Done loading body for cube }CubeAttributes
+5464   []   INFO   2016-10-18 08:30:20.830   TM1.Cube    Loading body for cube }CubeSecurity
+5464   []   INFO   2016-10-18 08:30:20.831   TM1.Cube    Done loading body for cube }CubeSecurity
+5464   []   INFO   2016-10-18 08:30:20.831   TM1.Cube    Loading body for cube }CubeSecurityProperties
+5464   []   INFO   2016-10-18 08:30:20.831   TM1.Cube    Done loading body for cube }CubeSecurityProperties
+5464   []   INFO   2016-10-18 08:30:20.831   TM1.Cube    Loading body for cube }DimensionAttributes
+5464   []   INFO   2016-10-18 08:30:20.832   TM1.Cube    Done loading body for cube }DimensionAttributes
+5464   []   INFO   2016-10-18 08:30:20.832   TM1.Cube    Loading body for cube }DimensionSecurity
+5464   []   INFO   2016-10-18 08:30:20.832   TM1.Cube    Done loading body for cube }DimensionSecurity
+5464   []   INFO   2016-10-18 08:30:20.833   TM1.Cube    Loading body for cube }HierarchyProperties
+5464   []   INFO   2016-10-18 08:30:20.833   TM1.Cube    Done loading body for cube }HierarchyProperties
+5464   []   INFO   2016-10-18 08:30:20.833   TM1.Dimension    Loading dimension Account
+5464   []   INFO   2016-10-18 08:30:20.836   TM1.Dimension    Loading dimension Currency From
+5464   []   INFO   2016-10-18 08:30:20.836   TM1.Dimension    Loading dimension Currency Measure
+5464   []   INFO   2016-10-18 08:30:20.836   TM1.Dimension    Loading dimension Currency To
+5464   []   INFO   2016-10-18 08:30:20.837   TM1.Dimension    Loading dimension Currency
+5464   []   INFO   2016-10-18 08:30:20.837   TM1.Dimension    Loading dimension Day
+5464   []   INFO   2016-10-18 08:30:20.841   TM1.Dimension    Loading dimension Department
+5464   []   INFO   2016-10-18 08:30:20.841   TM1.Dimension    Loading dimension Destination
+5464   []   INFO   2016-10-18 08:30:21.132   TM1.Dimension    Loading dimension Dimension Sort
+5464   []   INFO   2016-10-18 08:30:21.133   TM1.Dimension    Loading dimension Employee Measure
+5464   []   INFO   2016-10-18 08:30:21.133   TM1.Dimension    Loading dimension Employee Type
+5464   []   INFO   2016-10-18 08:30:21.133   TM1.Dimension    Loading dimension Employee
+5464   []   INFO   2016-10-18 08:30:21.135   TM1.Dimension    Loading dimension General Ledger Measure
+5464   []   INFO   2016-10-18 08:30:21.136   TM1.Dimension    Loading dimension Month
+5464   []   INFO   2016-10-18 08:30:21.136   TM1.Dimension    Loading dimension New Dimension
+5464   []   INFO   2016-10-18 08:30:21.137   TM1.Dimension    Loading dimension Organization
+5464   []   INFO   2016-10-18 08:30:21.137   TM1.Dimension    Loading dimension Pay Type
+5464   []   INFO   2016-10-18 08:30:21.141   TM1.Dimension    Loading dimension Period
+5464   []   INFO   2016-10-18 08:30:21.142   TM1.Dimension    Loading dimension Planning Measure
+5464   []   INFO   2016-10-18 08:30:21.142   TM1.Dimension    Loading dimension Product Measure
+5464   []   INFO   2016-10-18 08:30:21.142   TM1.Dimension    Loading dimension Product Sub Category
+5464   []   INFO   2016-10-18 08:30:21.143   TM1.Dimension    Loading dimension Product Type by Region Measure
+5464   []   INFO   2016-10-18 08:30:21.143   TM1.Dimension    Loading dimension Product Type
+5464   []   INFO   2016-10-18 08:30:21.144   TM1.Dimension    Loading dimension Product
+5464   []   INFO   2016-10-18 08:30:21.148   TM1.Dimension    Loading dimension Promotion
+5464   []   INFO   2016-10-18 08:30:21.148   TM1.Dimension    Loading dimension Region with Local Descriptions
+5464   []   INFO   2016-10-18 08:30:21.148   TM1.Dimension    Loading dimension Region
+5464   []   INFO   2016-10-18 08:30:21.148   TM1.Dimension    Loading dimension Regional Assumptions Measure
+5464   []   INFO   2016-10-18 08:30:21.148   TM1.Dimension    Loading dimension Reseller
+5464   []   INFO   2016-10-18 08:30:21.153   TM1.Dimension    Loading dimension Retail Measure
+5464   []   INFO   2016-10-18 08:30:21.153   TM1.Dimension    Loading dimension Sales Measure
+5464   []   INFO   2016-10-18 08:30:21.153   TM1.Dimension    Loading dimension Sales Quota Measure
+5464   []   INFO   2016-10-18 08:30:21.153   TM1.Dimension    Loading dimension Sales Reason
+5464   []   INFO   2016-10-18 08:30:21.154   TM1.Dimension    Loading dimension Sales Territory To Region Lookup
+5464   []   INFO   2016-10-18 08:30:21.154   TM1.Dimension    Loading dimension Sales Territory
+5464   []   INFO   2016-10-18 08:30:21.155   TM1.Dimension    Loading dimension Scenario
+5464   []   INFO   2016-10-18 08:30:21.155   TM1.Dimension    Loading dimension System Info Measures
+5464   []   INFO   2016-10-18 08:30:21.155   TM1.Dimension    Loading dimension System Info Parameter
+5464   []   INFO   2016-10-18 08:30:21.156   TM1.Dimension    Loading dimension System Parameter
+5464   []   INFO   2016-10-18 08:30:21.160   TM1.Dimension    Loading dimension Territory
+5464   []   INFO   2016-10-18 08:30:21.160   TM1.Dimension    Loading dimension Time Measures
+5464   []   INFO   2016-10-18 08:30:21.161   TM1.Dimension    Loading dimension Version
+5464   []   INFO   2016-10-18 08:30:21.161   TM1.Dimension    Loading dimension Year
+5464   []   INFO   2016-10-18 08:30:21.162   TM1.Dimension    Loading dimension }-intDPD-hidden-1
+5464   []   INFO   2016-10-18 08:30:21.162   TM1.Dimension    Loading dimension }AnnotationAppContextFacets
+5464   []   INFO   2016-10-18 08:30:21.162   TM1.Dimension    Loading dimension }AnnotationMeasures
+5464   []   INFO   2016-10-18 08:30:21.162   TM1.Dimension    Loading dimension }Annotation_ApplicationID
+5464   []   INFO   2016-10-18 08:30:21.163   TM1.Dimension    Loading dimension }ApplicationEntries
+5464   []   INFO   2016-10-18 08:30:21.163   TM1.Dimension    Loading dimension }CAMAssociatedGroups
+5464   []   INFO   2016-10-18 08:30:21.163   TM1.Dimension    Loading dimension }CaptionMeasures
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ClientProperties
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }Clients
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ClientSettings
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ConnectionProperties
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }Connections
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }Cube Functions
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }CubeDrillString
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }Cultures
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }DeployedLinkRecord
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }DimensionFormatAttributes
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }DimensionFormatItems
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Account
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Currency Measure
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Currency To
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Currency
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Day
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Department
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Destination
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Employee Measure
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Employee
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_General Ledger Measure
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_month
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_New Dimension
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Organization
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Period
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Planning Measure
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Product Measure
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Product
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Promotion
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Region with Local Descriptions
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Region
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Reseller
+5464   []   INFO   2016-10-18 08:30:21.164   TM1.Dimension    Loading dimension }ElementAttributes_Retail Measure
+5464   []   INFO   2016-10-18 08:30:21.165   TM1.Dimension    Loading dimension }ElementAttributes_Sales Measure
+5464   []   INFO   2016-10-18 08:30:21.166   TM1.Dimension    Loading dimension }ElementAttributes_Sales Quota Measure
+5464   []   INFO   2016-10-18 08:30:21.168   TM1.Dimension    Loading dimension }ElementAttributes_Sales Reason
+5464   []   INFO   2016-10-18 08:30:21.168   TM1.Dimension    Loading dimension }ElementAttributes_Sales Territory To Region Lookup
+5464   []   INFO   2016-10-18 08:30:21.169   TM1.Dimension    Loading dimension }ElementAttributes_Sales Territory
+5464   []   INFO   2016-10-18 08:30:21.170   TM1.Dimension    Loading dimension }ElementAttributes_Scenario
+5464   []   INFO   2016-10-18 08:30:21.171   TM1.Dimension    Loading dimension }ElementAttributes_System Info Parameter
+5464   []   INFO   2016-10-18 08:30:21.172   TM1.Dimension    Loading dimension }ElementAttributes_Version
+5464   []   INFO   2016-10-18 08:30:21.173   TM1.Dimension    Loading dimension }ElementAttributes_Year
+5464   []   INFO   2016-10-18 08:30:21.174   TM1.Dimension    Loading dimension }ElementAttributes_}Clients
+5464   []   INFO   2016-10-18 08:30:21.174   TM1.Dimension    Loading dimension }ElementAttributes_}Cultures
+5464   []   INFO   2016-10-18 08:30:21.176   TM1.Dimension    Loading dimension }ElementAttributes_}DeployedLinkRecord
+5464   []   INFO   2016-10-18 08:30:21.177   TM1.Dimension    Loading dimension }ElementAttributes_}formatTesterDimensionA
+5464   []   INFO   2016-10-18 08:30:21.178   TM1.Dimension    Loading dimension }ElementAttributes_}formatTesterDimensionB
+5464   []   INFO   2016-10-18 08:30:21.179   TM1.Dimension    Loading dimension }ElementAttributes_}Groups
+5464   []   INFO   2016-10-18 08:30:21.190   TM1.Dimension    Loading dimension }ElementAttributes_}Links
+5464   []   INFO   2016-10-18 08:30:21.191   TM1.Dimension    Loading dimension }ElementAttributes_}Modeling
+5464   []   INFO   2016-10-18 08:30:21.191   TM1.Dimension    Loading dimension }ElementAttributes_}tp_applications
+5464   []   INFO   2016-10-18 08:30:21.192   TM1.Dimension    Loading dimension }ElementAttributes_}tp_config
+5464   []   INFO   2016-10-18 08:30:21.192   TM1.Dimension    Loading dimension }ElementAttributes_}tp_system_config
+5464   []   INFO   2016-10-18 08:30:21.192   TM1.Dimension    Loading dimension }ElementProperties
+5464   []   INFO   2016-10-18 08:30:21.193   TM1.Dimension    Loading dimension }Features
+5464   []   INFO   2016-10-18 08:30:21.193   TM1.Dimension    Loading dimension }formatTesterDimensionA
+5464   []   INFO   2016-10-18 08:30:21.194   TM1.Dimension    Loading dimension }formatTesterDimensionB
+5464   []   INFO   2016-10-18 08:30:21.194   TM1.Dimension    Loading dimension }Hold
+5464   []   INFO   2016-10-18 08:30:21.194   TM1.Dimension    Loading dimension }Links
+5464   []   INFO   2016-10-18 08:30:21.194   TM1.Dimension    Loading dimension }Modeling
+5464   []   INFO   2016-10-18 08:30:21.196   TM1.Dimension    Loading dimension }PerfClients
+5464   []   INFO   2016-10-18 08:30:21.197   TM1.Dimension    Loading dimension }PerfCubes
+5464   []   INFO   2016-10-18 08:30:21.197   TM1.Dimension    Loading dimension }Permissions
+5464   []   INFO   2016-10-18 08:30:21.198   TM1.Dimension    Loading dimension }PickList
+5464   []   INFO   2016-10-18 08:30:21.198   TM1.Dimension    Loading dimension }SecurityOverlay
+5464   []   INFO   2016-10-18 08:30:21.198   TM1.Dimension    Loading dimension }StatsByProcess
+5464   []   INFO   2016-10-18 08:30:21.198   TM1.Dimension    Loading dimension }StatsStatsByClient
+5464   []   INFO   2016-10-18 08:30:21.199   TM1.Dimension    Loading dimension }StatsStatsByCube
+5464   []   INFO   2016-10-18 08:30:21.199   TM1.Dimension    Loading dimension }StatsStatsByCubeByClient
+5464   []   INFO   2016-10-18 08:30:21.199   TM1.Dimension    Loading dimension }StatsStatsForServer
+5464   []   INFO   2016-10-18 08:30:21.200   TM1.Dimension    Loading dimension }SysControlCubeMeasure
+5464   []   INFO   2016-10-18 08:30:21.200   TM1.Dimension    Loading dimension }TimeIntervals
+5464   []   INFO   2016-10-18 08:30:21.201   TM1.Dimension    Loading dimension }tp_applications
+5464   []   INFO   2016-10-18 08:30:21.201   TM1.Dimension    Loading dimension }tp_config
+5464   []   INFO   2016-10-18 08:30:21.202   TM1.Dimension    Loading dimension }tp_lock
+5464   []   INFO   2016-10-18 08:30:21.202   TM1.Dimension    Loading dimension }tp_node_info
+5464   []   INFO   2016-10-18 08:30:21.202   TM1.Dimension    Loading dimension }tp_permissions
+5464   []   INFO   2016-10-18 08:30:21.203   TM1.Dimension    Loading dimension }tp_process_error_measures
+5464   []   INFO   2016-10-18 08:30:21.203   TM1.Dimension    Loading dimension }tp_process_guids
+5464   []   INFO   2016-10-18 08:30:21.205   TM1.Dimension    Loading dimension }tp_system_config
+5464   []   INFO   2016-10-18 08:30:21.205   TM1.Dimension    Loading dimension }tp_ti_execution
+5464   []   INFO   2016-10-18 08:30:21.206   TM1.Server    Loading rules for cube }ElementAttributes_Account
+5464   []   INFO   2016-10-18 08:30:21.206   TM1.Server    Loading rules for cube }ElementAttributes_Currency Measure
+5464   []   INFO   2016-10-18 08:30:21.207   TM1.Server    Loading rules for cube }ElementAttributes_Currency To
+5464   []   INFO   2016-10-18 08:30:21.207   TM1.Server    Loading rules for cube }ElementAttributes_Currency
+5464   []   INFO   2016-10-18 08:30:21.208   TM1.Server    Loading rules for cube }ElementAttributes_Day
+5464   []   INFO   2016-10-18 08:30:21.212   TM1.Server    Loading rules for cube }ElementAttributes_Department
+5464   []   INFO   2016-10-18 08:30:21.212   TM1.Server    Loading rules for cube }ElementAttributes_Destination
+5464   []   INFO   2016-10-18 08:30:21.213   TM1.Server    Loading rules for cube }ElementAttributes_Employee Measure
+5464   []   INFO   2016-10-18 08:30:21.213   TM1.Server    Loading rules for cube }ElementAttributes_Employee
+5464   []   INFO   2016-10-18 08:30:21.220   TM1.Server    Loading rules for cube }ElementAttributes_General Ledger Measure
+5464   []   INFO   2016-10-18 08:30:21.220   TM1.Server    Loading rules for cube }ElementAttributes_month
+5464   []   INFO   2016-10-18 08:30:21.220   TM1.Server    Loading rules for cube }ElementAttributes_New Dimension
+5464   []   INFO   2016-10-18 08:30:21.220   TM1.Server    Loading rules for cube }ElementAttributes_Organization
+5464   []   INFO   2016-10-18 08:30:21.221   TM1.Server    Loading rules for cube }ElementAttributes_Period
+5464   []   INFO   2016-10-18 08:30:21.221   TM1.Server    Loading rules for cube }ElementAttributes_Planning Measure
+5464   []   INFO   2016-10-18 08:30:21.221   TM1.Server    Loading rules for cube }ElementAttributes_Product Measure
+5464   []   INFO   2016-10-18 08:30:21.221   TM1.Server    Loading rules for cube }ElementAttributes_Product
+5464   []   INFO   2016-10-18 08:30:21.221   TM1.Server    Loading rules for cube }ElementAttributes_Promotion
+5464   []   INFO   2016-10-18 08:30:21.222   TM1.Server    Loading rules for cube }ElementAttributes_Region with Local Descriptions
+5464   []   INFO   2016-10-18 08:30:21.222   TM1.Server    Loading rules for cube }ElementAttributes_Region
+5464   []   INFO   2016-10-18 08:30:21.222   TM1.Server    Loading rules for cube }ElementAttributes_Reseller
+5464   []   INFO   2016-10-18 08:30:21.223   TM1.Server    Loading rules for cube }ElementAttributes_Retail Measure
+5464   []   INFO   2016-10-18 08:30:21.223   TM1.Server    Loading rules for cube }ElementAttributes_Sales Measure
+5464   []   INFO   2016-10-18 08:30:21.223   TM1.Server    Loading rules for cube }ElementAttributes_Sales Quota Measure
+5464   []   INFO   2016-10-18 08:30:21.223   TM1.Server    Loading rules for cube }ElementAttributes_Sales Reason
+5464   []   INFO   2016-10-18 08:30:21.223   TM1.Server    Loading rules for cube }ElementAttributes_Sales Territory To Region Lookup
+5464   []   INFO   2016-10-18 08:30:21.223   TM1.Server    Loading rules for cube }ElementAttributes_Sales Territory
+5464   []   INFO   2016-10-18 08:30:21.224   TM1.Server    Loading rules for cube }ElementAttributes_Scenario
+5464   []   INFO   2016-10-18 08:30:21.224   TM1.Server    Loading rules for cube }ElementAttributes_System Info Parameter
+5464   []   INFO   2016-10-18 08:30:21.224   TM1.Server    Loading rules for cube }ElementAttributes_Version
+5464   []   INFO   2016-10-18 08:30:21.224   TM1.Server    Loading rules for cube }ElementAttributes_Year
+5464   []   INFO   2016-10-18 08:30:21.224   TM1.Server    Loading rules for cube }ElementAttributes_}Clients
+5464   []   INFO   2016-10-18 08:30:21.225   TM1.Server    Loading rules for cube }ElementAttributes_}Cultures
+5464   []   INFO   2016-10-18 08:30:21.225   TM1.Server    Loading rules for cube }ElementAttributes_}DeployedLinkRecord
+5464   []   INFO   2016-10-18 08:30:21.225   TM1.Server    Loading rules for cube }ElementAttributes_}formatTesterDimensionA
+5464   []   INFO   2016-10-18 08:30:21.225   TM1.Server    Loading rules for cube }ElementAttributes_}formatTesterDimensionB
+5464   []   INFO   2016-10-18 08:30:21.226   TM1.Server    Loading rules for cube }ElementAttributes_}Groups
+5464   []   INFO   2016-10-18 08:30:21.226   TM1.Server    Loading rules for cube }ElementAttributes_}Links
+5464   []   INFO   2016-10-18 08:30:21.226   TM1.Server    Loading rules for cube }ElementAttributes_}Modeling
+5464   []   INFO   2016-10-18 08:30:21.226   TM1.Server    Loading rules for cube }ElementAttributes_}tp_applications
+5464   []   INFO   2016-10-18 08:30:21.226   TM1.Server    Loading rules for cube }ElementAttributes_}tp_config
+5464   []   INFO   2016-10-18 08:30:21.227   TM1.Server    Loading rules for cube }ElementAttributes_}tp_system_config
+5464   []   INFO   2016-10-18 08:30:21.227   TM1.Cube    Loading body for cube }ElementAttributes_Account
+5464   []   INFO   2016-10-18 08:30:21.228   TM1.Cube    Done loading body for cube }ElementAttributes_Account
+5464   []   INFO   2016-10-18 08:30:21.228   TM1.Cube    Loading body for cube }ElementAttributes_Currency Measure
+5464   []   INFO   2016-10-18 08:30:21.228   TM1.Cube    Done loading body for cube }ElementAttributes_Currency Measure
+5464   []   INFO   2016-10-18 08:30:21.228   TM1.Cube    Loading body for cube }ElementAttributes_Currency To
+5464   []   INFO   2016-10-18 08:30:21.228   TM1.Cube    Done loading body for cube }ElementAttributes_Currency To
+5464   []   INFO   2016-10-18 08:30:21.228   TM1.Cube    Loading body for cube }ElementAttributes_Currency
+5464   []   INFO   2016-10-18 08:30:21.229   TM1.Cube    Done loading body for cube }ElementAttributes_Currency
+5464   []   INFO   2016-10-18 08:30:21.229   TM1.Cube    Loading body for cube }ElementAttributes_Day
+5464   []   INFO   2016-10-18 08:30:21.229   TM1.Cube    Done loading body for cube }ElementAttributes_Day
+5464   []   INFO   2016-10-18 08:30:21.230   TM1.Cube    Loading body for cube }ElementAttributes_Department
+5464   []   INFO   2016-10-18 08:30:21.230   TM1.Cube    Done loading body for cube }ElementAttributes_Department
+5464   []   INFO   2016-10-18 08:30:21.230   TM1.Cube    Loading body for cube }ElementAttributes_Destination
+5464   []   INFO   2016-10-18 08:30:21.253   TM1.Cube    Done loading body for cube }ElementAttributes_Destination
+5464   []   INFO   2016-10-18 08:30:21.254   TM1.Cube    Loading body for cube }ElementAttributes_Employee Measure
+5464   []   INFO   2016-10-18 08:30:21.254   TM1.Cube    Done loading body for cube }ElementAttributes_Employee Measure
+5464   []   INFO   2016-10-18 08:30:21.254   TM1.Cube    Loading body for cube }ElementAttributes_Employee
+5464   []   INFO   2016-10-18 08:30:21.255   TM1.Cube    Done loading body for cube }ElementAttributes_Employee
+5464   []   INFO   2016-10-18 08:30:21.256   TM1.Cube    Loading body for cube }ElementAttributes_General Ledger Measure
+5464   []   INFO   2016-10-18 08:30:21.256   TM1.Cube    Done loading body for cube }ElementAttributes_General Ledger Measure
+5464   []   INFO   2016-10-18 08:30:21.256   TM1.Cube    Loading body for cube }ElementAttributes_month
+5464   []   INFO   2016-10-18 08:30:21.257   TM1.Cube    Done loading body for cube }ElementAttributes_month
+5464   []   INFO   2016-10-18 08:30:21.257   TM1.Cube    Loading body for cube }ElementAttributes_New Dimension
+5464   []   INFO   2016-10-18 08:30:21.257   TM1.Cube    Done loading body for cube }ElementAttributes_New Dimension
+5464   []   INFO   2016-10-18 08:30:21.257   TM1.Cube    Loading body for cube }ElementAttributes_Organization
+5464   []   INFO   2016-10-18 08:30:21.258   TM1.Cube    Done loading body for cube }ElementAttributes_Organization
+5464   []   INFO   2016-10-18 08:30:21.258   TM1.Cube    Loading body for cube }ElementAttributes_Period
+5464   []   INFO   2016-10-18 08:30:21.259   TM1.Cube    Done loading body for cube }ElementAttributes_Period
+5464   []   INFO   2016-10-18 08:30:21.259   TM1.Cube    Loading body for cube }ElementAttributes_Planning Measure
+5464   []   INFO   2016-10-18 08:30:21.259   TM1.Cube    Done loading body for cube }ElementAttributes_Planning Measure
+5464   []   INFO   2016-10-18 08:30:21.259   TM1.Cube    Loading body for cube }ElementAttributes_Product Measure
+5464   []   INFO   2016-10-18 08:30:21.259   TM1.Cube    Done loading body for cube }ElementAttributes_Product Measure
+5464   []   INFO   2016-10-18 08:30:21.260   TM1.Cube    Loading body for cube }ElementAttributes_Product
+5464   []   INFO   2016-10-18 08:30:21.261   TM1.Cube    Done loading body for cube }ElementAttributes_Product
+5464   []   INFO   2016-10-18 08:30:21.262   TM1.Cube    Loading body for cube }ElementAttributes_Promotion
+5464   []   INFO   2016-10-18 08:30:21.262   TM1.Cube    Done loading body for cube }ElementAttributes_Promotion
+5464   []   INFO   2016-10-18 08:30:21.262   TM1.Cube    Loading body for cube }ElementAttributes_Region with Local Descriptions
+5464   []   INFO   2016-10-18 08:30:21.266   TM1.Cube    Done loading body for cube }ElementAttributes_Region with Local Descriptions
+5464   []   INFO   2016-10-18 08:30:21.266   TM1.Cube    Loading body for cube }ElementAttributes_Region
+5464   []   INFO   2016-10-18 08:30:21.266   TM1.Cube    Done loading body for cube }ElementAttributes_Region
+5464   []   INFO   2016-10-18 08:30:21.266   TM1.Cube    Loading body for cube }ElementAttributes_Reseller
+5464   []   INFO   2016-10-18 08:30:21.267   TM1.Cube    Done loading body for cube }ElementAttributes_Reseller
+5464   []   INFO   2016-10-18 08:30:21.268   TM1.Cube    Loading body for cube }ElementAttributes_Retail Measure
+5464   []   INFO   2016-10-18 08:30:21.268   TM1.Cube    Done loading body for cube }ElementAttributes_Retail Measure
+5464   []   INFO   2016-10-18 08:30:21.268   TM1.Cube    Loading body for cube }ElementAttributes_Sales Measure
+5464   []   INFO   2016-10-18 08:30:21.268   TM1.Cube    Done loading body for cube }ElementAttributes_Sales Measure
+5464   []   INFO   2016-10-18 08:30:21.268   TM1.Cube    Loading body for cube }ElementAttributes_Sales Quota Measure
+5464   []   INFO   2016-10-18 08:30:21.268   TM1.Cube    Done loading body for cube }ElementAttributes_Sales Quota Measure
+5464   []   INFO   2016-10-18 08:30:21.269   TM1.Cube    Loading body for cube }ElementAttributes_Sales Reason
+5464   []   INFO   2016-10-18 08:30:21.269   TM1.Cube    Done loading body for cube }ElementAttributes_Sales Reason
+5464   []   INFO   2016-10-18 08:30:21.269   TM1.Cube    Loading body for cube }ElementAttributes_Sales Territory To Region Lookup
+5464   []   INFO   2016-10-18 08:30:21.270   TM1.Cube    Done loading body for cube }ElementAttributes_Sales Territory To Region Lookup
+5464   []   INFO   2016-10-18 08:30:21.270   TM1.Cube    Loading body for cube }ElementAttributes_Sales Territory
+5464   []   INFO   2016-10-18 08:30:21.270   TM1.Cube    Done loading body for cube }ElementAttributes_Sales Territory
+5464   []   INFO   2016-10-18 08:30:21.270   TM1.Cube    Loading body for cube }ElementAttributes_Scenario
+5464   []   INFO   2016-10-18 08:30:21.270   TM1.Cube    Done loading body for cube }ElementAttributes_Scenario
+5464   []   INFO   2016-10-18 08:30:21.271   TM1.Cube    Loading body for cube }ElementAttributes_System Info Parameter
+5464   []   INFO   2016-10-18 08:30:21.271   TM1.Cube    Done loading body for cube }ElementAttributes_System Info Parameter
+5464   []   INFO   2016-10-18 08:30:21.271   TM1.Cube    Loading body for cube }ElementAttributes_Version
+5464   []   INFO   2016-10-18 08:30:21.271   TM1.Cube    Done loading body for cube }ElementAttributes_Version
+5464   []   INFO   2016-10-18 08:30:21.271   TM1.Cube    Loading body for cube }ElementAttributes_Year
+5464   []   INFO   2016-10-18 08:30:21.272   TM1.Cube    Done loading body for cube }ElementAttributes_Year
+5464   []   INFO   2016-10-18 08:30:21.272   TM1.Cube    Loading body for cube }ElementAttributes_}Clients
+5464   []   INFO   2016-10-18 08:30:21.272   TM1.Cube    Done loading body for cube }ElementAttributes_}Clients
+5464   []   INFO   2016-10-18 08:30:21.272   TM1.Cube    Loading body for cube }ElementAttributes_}Cultures
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Done loading body for cube }ElementAttributes_}Cultures
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Loading body for cube }ElementAttributes_}DeployedLinkRecord
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Done loading body for cube }ElementAttributes_}DeployedLinkRecord
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Loading body for cube }ElementAttributes_}formatTesterDimensionA
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Done loading body for cube }ElementAttributes_}formatTesterDimensionA
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Loading body for cube }ElementAttributes_}formatTesterDimensionB
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Done loading body for cube }ElementAttributes_}formatTesterDimensionB
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Loading body for cube }ElementAttributes_}Groups
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Done loading body for cube }ElementAttributes_}Groups
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Loading body for cube }ElementAttributes_}Links
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Done loading body for cube }ElementAttributes_}Links
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Loading body for cube }ElementAttributes_}Modeling
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Done loading body for cube }ElementAttributes_}Modeling
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Loading body for cube }ElementAttributes_}tp_applications
+5464   []   INFO   2016-10-18 08:30:21.273   TM1.Cube    Done loading body for cube }ElementAttributes_}tp_applications
+5464   []   INFO   2016-10-18 08:30:21.274   TM1.Cube    Loading body for cube }ElementAttributes_}tp_config
+5464   []   INFO   2016-10-18 08:30:21.274   TM1.Cube    Done loading body for cube }ElementAttributes_}tp_config
+5464   []   INFO   2016-10-18 08:30:21.275   TM1.Cube    Loading body for cube }ElementAttributes_}tp_system_config
+5464   []   INFO   2016-10-18 08:30:21.275   TM1.Cube    Done loading body for cube }ElementAttributes_}tp_system_config
+5464   []   INFO   2016-10-18 08:30:21.357   TM1.Server    Loading rules for cube Currency Exchange Rates
+5464   []   INFO   2016-10-18 08:30:21.360   TM1.Server    Loading rules for cube Employee
+5464   []   INFO   2016-10-18 08:30:21.369   TM1.Cube.Dependency   Adding cube dependency: Cube 'Employee' depends on cube 'Currency Exchange Rates'.
+5464   []   INFO   2016-10-18 08:30:21.369   TM1.Cube.Dependency   Adding cube dependency: Cube 'Employee' depends on cube '}ElementAttributes_Region'.
+5464   []   INFO   2016-10-18 08:30:21.369   TM1.Cube.Dependency   Adding cube dependency: Cube 'Employee' depends on cube 'Time'.
+5464   []   INFO   2016-10-18 08:30:21.369   TM1.Cube.Dependency   Adding cube dependency: Cube 'Employee' depends on cube 'Regional Assumptions'.
+5464   []   INFO   2016-10-18 08:30:21.370   TM1.Server    Loading rules for cube General Ledger
+5464   []   INFO   2016-10-18 08:30:21.375   TM1.Cube.Dependency   Adding cube dependency: Cube 'General Ledger' depends on cube 'Currency Exchange Rates'.
+5464   []   INFO   2016-10-18 08:30:21.375   TM1.Cube.Dependency   Adding cube dependency: Cube 'General Ledger' depends on cube '}ElementAttributes_Region'.
+5464   []   INFO   2016-10-18 08:30:21.375   TM1.Cube.Dependency   Adding cube dependency: Cube 'General Ledger' depends on cube 'Planning Assumptions'.
+5464   []   INFO   2016-10-18 08:30:21.375   TM1.Cube.Dependency   Adding cube dependency: Cube 'General Ledger' depends on cube 'System Info'.
+5464   []   INFO   2016-10-18 08:30:21.375   TM1.Cube.Dependency   Adding cube dependency: Cube 'General Ledger' depends on cube '}ElementAttributes_Version'.
+5464   []   INFO   2016-10-18 08:30:21.375   TM1.Cube.Dependency   Adding cube dependency: Cube 'General Ledger' depends on cube 'Wholesale'.
+5464   []   INFO   2016-10-18 08:30:21.376   TM1.Cube.Dependency   Adding cube dependency: Cube 'General Ledger' depends on cube 'Retail'.
+5464   []   INFO   2016-10-18 08:30:21.376   TM1.Cube.Dependency   Adding cube dependency: Cube 'General Ledger' depends on cube 'Regional Assumptions'.
+5464   []   INFO   2016-10-18 08:30:21.376   TM1.Cube.Dependency   Adding cube dependency: Cube 'General Ledger' depends on cube 'Employee'.
+5464   []   INFO   2016-10-18 08:30:21.376   TM1.Cube.Dependency   Adding cube dependency: Cube 'General Ledger' depends on cube '}ElementAttributes_Year'.
+5464   []   INFO   2016-10-18 08:30:21.376   TM1.Server    Loading rules for cube Planning Assumptions
+5464   []   INFO   2016-10-18 08:30:21.377   TM1.Server    Loading rules for cube Product Type by Region
+5464   []   INFO   2016-10-18 08:30:21.378   TM1.Cube.Dependency   Adding cube dependency: Cube 'Product Type by Region' depends on cube 'Currency Exchange Rates'.
+5464   []   INFO   2016-10-18 08:30:21.378   TM1.Cube.Dependency   Adding cube dependency: Cube 'Product Type by Region' depends on cube '}ElementAttributes_Region'.
+5464   []   INFO   2016-10-18 08:30:21.378   TM1.Server    Loading rules for cube Product
+5464   []   INFO   2016-10-18 08:30:21.379   TM1.Server    Loading rules for cube Regional Assumptions
+5464   []   INFO   2016-10-18 08:30:21.379   TM1.Server    Loading rules for cube Retail
+5464   []   INFO   2016-10-18 08:30:21.380   TM1.Cube.Dependency   Adding cube dependency: Cube 'Retail' depends on cube 'Currency Exchange Rates'.
+5464   []   INFO   2016-10-18 08:30:21.380   TM1.Cube.Dependency   Adding cube dependency: Cube 'Retail' depends on cube '}ElementAttributes_Region'.
+5464   []   INFO   2016-10-18 08:30:21.380   TM1.Cube.Dependency   Adding cube dependency: Cube 'Retail' depends on cube 'Product Type by Region'.
+5464   []   INFO   2016-10-18 08:30:21.380   TM1.Cube.Dependency   Adding cube dependency: Cube 'Retail' depends on cube '}ElementAttributes_Product'.
+5464   []   INFO   2016-10-18 08:30:21.380   TM1.Cube.Dependency   Adding cube dependency: Cube 'Retail' depends on cube 'Product'.
+5464   []   INFO   2016-10-18 08:30:21.380   TM1.Cube.Dependency   Adding cube dependency: Cube 'Retail' depends on cube 'System Info'.
+5464   []   INFO   2016-10-18 08:30:21.380   TM1.Cube.Dependency   Adding cube dependency: Cube 'Retail' depends on cube '}ElementAttributes_Version'.
+5464   []   INFO   2016-10-18 08:30:21.380   TM1.Server    Loading rules for cube Sales Quota
+5464   []   INFO   2016-10-18 08:30:21.381   TM1.Server    Loading rules for cube System Info
+5464   []   INFO   2016-10-18 08:30:21.382   TM1.Server    Loading rules for cube Test
+5464   []   INFO   2016-10-18 08:30:21.382   TM1.Server    Loading rules for cube Time
+5464   []   INFO   2016-10-18 08:30:21.382   TM1.Server    Loading rules for cube Wholesale
+5464   []   INFO   2016-10-18 08:30:21.383   TM1.Cube.Dependency   Adding cube dependency: Cube 'Wholesale' depends on cube 'Currency Exchange Rates'.
+5464   []   INFO   2016-10-18 08:30:21.383   TM1.Cube.Dependency   Adding cube dependency: Cube 'Wholesale' depends on cube '}ElementAttributes_Region'.
+5464   []   INFO   2016-10-18 08:30:21.383   TM1.Server    Loading rules for cube }Capabilities
+5464   []   INFO   2016-10-18 08:30:21.384   TM1.Server    Loading rules for cube }CellAnnotations_General Ledger
+5464   []   INFO   2016-10-18 08:30:21.384   TM1.Server    Loading rules for cube }CellSecurity_General Ledger
+5464   []   INFO   2016-10-18 08:30:21.384   TM1.Server    Loading rules for cube }ChoreSecurity
+5464   []   INFO   2016-10-18 08:30:21.384   TM1.Server    Loading rules for cube }ClientCAMAssociatedGroups
+5464   []   INFO   2016-10-18 08:30:21.384   TM1.Server    Loading rules for cube }ClientGroups
+5464   []   INFO   2016-10-18 08:30:21.385   TM1.Server    Loading rules for cube }ClientProperties
+5464   []   INFO   2016-10-18 08:30:21.385   TM1.Server    Loading rules for cube }ClientSettings
+5464   []   INFO   2016-10-18 08:30:21.385   TM1.Server    Loading rules for cube }CubeAttributes
+5464   []   INFO   2016-10-18 08:30:21.385   TM1.Server    Loading rules for cube }CubeCaptions
+5464   []   INFO   2016-10-18 08:30:21.385   TM1.Cube.Dependency   Adding cube dependency: Cube '}CubeCaptions' depends on cube '}ElementAttributes_}Cultures'.
+5464   []   INFO   2016-10-18 08:30:21.386   TM1.Server    Loading rules for cube }CubeDrill_Employee
+5464   []   INFO   2016-10-18 08:30:21.386   TM1.Server    Loading rules for cube }CubeDrill_General Ledger
+5464   []   INFO   2016-10-18 08:30:21.386   TM1.Server    Loading rules for cube }CubeProperties
+5464   []   INFO   2016-10-18 08:30:21.387   TM1.Server    Loading rules for cube }CubeSecurity
+5464   []   INFO   2016-10-18 08:30:21.387   TM1.Server    Loading rules for cube }CubeSecurityProperties
+5464   []   INFO   2016-10-18 08:30:21.387   TM1.Server    Loading rules for cube }DimensionAttributes
+5464   []   INFO   2016-10-18 08:30:21.387   TM1.Server    Loading rules for cube }DimensionCaptions
+5464   []   INFO   2016-10-18 08:30:21.392   TM1.Cube.Dependency   Adding cube dependency: Cube '}DimensionCaptions' depends on cube '}ElementAttributes_}Cultures'.
+5464   []   INFO   2016-10-18 08:30:21.392   TM1.Server    Loading rules for cube }DimensionProperties
+5464   []   INFO   2016-10-18 08:30:21.393   TM1.Server    Loading rules for cube }DimensionSecurity
+5464   []   INFO   2016-10-18 08:30:21.393   TM1.Server    Loading rules for cube }ElementCaptions
+5464   []   INFO   2016-10-18 08:30:21.394   TM1.Cube.Dependency   Adding cube dependency: Cube '}ElementCaptions' depends on cube '}ElementAttributes_}Cultures'.
+5464   []   INFO   2016-10-18 08:30:21.394   TM1.Server    Loading rules for cube }ElementCaptionsByDimension
+5464   []   INFO   2016-10-18 08:30:21.395   TM1.Cube.Dependency   Adding cube dependency: Cube '}ElementCaptionsByDimension' depends on cube '}ElementAttributes_}Cultures'.
+5464   []   INFO   2016-10-18 08:30:21.395   TM1.Cube.Dependency   Adding cube dependency: Cube '}ElementCaptionsByDimension' depends on cube '}ElementCaptions'.
+5464   []   INFO   2016-10-18 08:30:21.396   TM1.Server    Loading rules for cube }ElementSecurity_Account
+5464   []   INFO   2016-10-18 08:30:21.396   TM1.Server    Loading rules for cube }ElementSecurity_Currency From
+5464   []   INFO   2016-10-18 08:30:21.397   TM1.Server    Loading rules for cube }ElementSecurity_Currency Measure
+5464   []   INFO   2016-10-18 08:30:21.397   TM1.Server    Loading rules for cube }ElementSecurity_Employee Measure
+5464   []   INFO   2016-10-18 08:30:21.397   TM1.Server    Loading rules for cube }ElementSecurity_Organization
+5464   []   INFO   2016-10-18 08:30:21.397   TM1.Server    Loading rules for cube }ElementSecurity_Planning Measure
+5464   []   INFO   2016-10-18 08:30:21.397   TM1.Server    Loading rules for cube }ElementSecurity_Product Measure
+5464   []   INFO   2016-10-18 08:30:21.398   TM1.Server    Loading rules for cube }ElementSecurity_Retail Measure
+5464   []   INFO   2016-10-18 08:30:21.398   TM1.Server    Loading rules for cube }ElementSecurity_Version
+5464   []   INFO   2016-10-18 08:30:21.398   TM1.Server    Loading rules for cube }ElementSecurity_Year
+5464   []   INFO   2016-10-18 08:30:21.398   TM1.Server    Loading rules for cube }ElementSecurity_}tp_applications
+5464   []   INFO   2016-10-18 08:30:21.398   TM1.Server    Loading rules for cube }formatTesterCube
+5464   []   INFO   2016-10-18 08:30:21.398   TM1.Server    Loading rules for cube }HierarchyProperties
+5464   []   INFO   2016-10-18 08:30:21.398   TM1.Server    Loading rules for cube }PickList_General Ledger
+5464   []   INFO   2016-10-18 08:30:21.399   TM1.Server    Loading rules for cube }ProcessSecurity
+5464   []   INFO   2016-10-18 08:30:21.399   TM1.Server    Loading rules for cube }StatsByChore
+5464   []   INFO   2016-10-18 08:30:21.399   TM1.Server    Loading rules for cube }StatsByClient
+5464   []   INFO   2016-10-18 08:30:21.399   TM1.Server    Loading rules for cube }StatsByCube
+5464   []   INFO   2016-10-18 08:30:21.400   TM1.Server    Loading rules for cube }StatsByCubeByClient
+5464   []   INFO   2016-10-18 08:30:21.400   TM1.Server    Loading rules for cube }StatsByProcess
+5464   []   INFO   2016-10-18 08:30:21.400   TM1.Server    Loading rules for cube }StatsForServer
+5464   []   INFO   2016-10-18 08:30:21.400   TM1.Server    Loading rules for cube }SysControlCube
+5464   []   INFO   2016-10-18 08:30:21.401   TM1.Server    Loading rules for cube }SysControlDimension
+5464   []   INFO   2016-10-18 08:30:21.401   TM1.Server    Loading rules for cube }tp_application_cubes
+5464   []   INFO   2016-10-18 08:30:21.401   TM1.Server    Loading rules for cube }tp_central_application_state
+5464   []   INFO   2016-10-18 08:30:21.401   TM1.Server    Loading rules for cube }tp_process_errors
+5464   []   INFO   2016-10-18 08:30:21.401   TM1.Server    Loading rules for cube }tp_semaphore
+5464   []   INFO   2016-10-18 08:30:21.415   TM1.Server    Cube loads are single threaded
+5464   []   INFO   2016-10-18 08:30:21.416   TM1.Cube    Loading body for cube Currency Exchange Rates
+5464   []   INFO   2016-10-18 08:30:21.416   TM1.Cube    Done loading body for cube Currency Exchange Rates
+5464   []   INFO   2016-10-18 08:30:21.416   TM1.Cube    Loading body for cube Employee
+5464   []   INFO   2016-10-18 08:30:21.423   TM1.Cube    Done loading body for cube Employee
+5464   []   INFO   2016-10-18 08:30:21.423   TM1.Cube    Loading body for cube General Ledger
+5464   []   INFO   2016-10-18 08:30:21.524   TM1.Cube    Done loading body for cube General Ledger
+5464   []   INFO   2016-10-18 08:30:21.524   TM1.Cube    Loading body for cube Planning Assumptions
+5464   []   INFO   2016-10-18 08:30:21.525   TM1.Cube    Done loading body for cube Planning Assumptions
+5464   []   INFO   2016-10-18 08:30:21.525   TM1.Cube    Loading body for cube Product Type by Region
+5464   []   INFO   2016-10-18 08:30:21.528   TM1.Cube    Done loading body for cube Product Type by Region
+5464   []   INFO   2016-10-18 08:30:21.529   TM1.Cube    Loading body for cube Product
+5464   []   INFO   2016-10-18 08:30:21.529   TM1.Cube    Done loading body for cube Product
+5464   []   INFO   2016-10-18 08:30:21.529   TM1.Cube    Loading body for cube Regional Assumptions
+5464   []   INFO   2016-10-18 08:30:21.531   TM1.Cube    Done loading body for cube Regional Assumptions
+5464   []   INFO   2016-10-18 08:30:21.531   TM1.Cube    Loading body for cube Retail
+5464   []   INFO   2016-10-18 08:30:21.683   TM1.Cube    Done loading body for cube Retail
+5464   []   INFO   2016-10-18 08:30:21.683   TM1.Cube    Loading body for cube Sales Quota
+5464   []   INFO   2016-10-18 08:30:21.684   TM1.Cube    Done loading body for cube Sales Quota
+5464   []   INFO   2016-10-18 08:30:21.684   TM1.Cube    Loading body for cube System Info
+5464   []   INFO   2016-10-18 08:30:21.684   TM1.Cube    Done loading body for cube System Info
+5464   []   INFO   2016-10-18 08:30:21.685   TM1.Cube    Loading body for cube Test
+5464   []   INFO   2016-10-18 08:30:21.685   TM1.Cube    Done loading body for cube Test
+5464   []   INFO   2016-10-18 08:30:21.685   TM1.Cube    Loading body for cube Time
+5464   []   INFO   2016-10-18 08:30:21.685   TM1.Cube    Done loading body for cube Time
+5464   []   INFO   2016-10-18 08:30:21.685   TM1.Cube    Loading body for cube Wholesale
+5464   []   INFO   2016-10-18 08:30:22.976   TM1.Cube    Done loading body for cube Wholesale
+5464   []   INFO   2016-10-18 08:30:22.977   TM1.Cube    Loading body for cube }Capabilities
+5464   []   INFO   2016-10-18 08:30:22.977   TM1.Cube    Done loading body for cube }Capabilities
+5464   []   INFO   2016-10-18 08:30:22.977   TM1.Cube    Loading body for cube }CellAnnotations_General Ledger
+5464   []   INFO   2016-10-18 08:30:22.978   TM1.Cube    Done loading body for cube }CellAnnotations_General Ledger
+5464   []   INFO   2016-10-18 08:30:22.978   TM1.Cube    Loading body for cube }CellSecurity_General Ledger
+5464   []   INFO   2016-10-18 08:30:22.978   TM1.Cube    Done loading body for cube }CellSecurity_General Ledger
+5464   []   INFO   2016-10-18 08:30:22.978   TM1.Cube    Loading body for cube }ChoreSecurity
+5464   []   INFO   2016-10-18 08:30:22.978   TM1.Cube    Done loading body for cube }ChoreSecurity
+5464   []   INFO   2016-10-18 08:30:22.979   TM1.Cube    Loading body for cube }ClientCAMAssociatedGroups
+5464   []   INFO   2016-10-18 08:30:22.983   TM1.Cube    Done loading body for cube }ClientCAMAssociatedGroups
+5464   []   INFO   2016-10-18 08:30:22.984   TM1.Cube    Loading body for cube }ClientGroups
+5464   []   INFO   2016-10-18 08:30:22.984   TM1.Cube    Done loading body for cube }ClientGroups
+5464   []   INFO   2016-10-18 08:30:22.984   TM1.Cube    Loading body for cube }ClientProperties
+5464   []   INFO   2016-10-18 08:30:22.984   TM1.Cube    Done loading body for cube }ClientProperties
+5464   []   INFO   2016-10-18 08:30:23.012   TM1.Cube    Loading body for cube }ClientSettings
+5464   []   INFO   2016-10-18 08:30:23.015   TM1.Cube    Done loading body for cube }ClientSettings
+5464   []   INFO   2016-10-18 08:30:23.015   TM1.Cube    Loading body for cube }CubeCaptions
+5464   []   INFO   2016-10-18 08:30:23.016   TM1.Cube    Done loading body for cube }CubeCaptions
+5464   []   INFO   2016-10-18 08:30:23.016   TM1.Cube    Loading body for cube }CubeDrill_Employee
+5464   []   INFO   2016-10-18 08:30:23.016   TM1.Cube    Done loading body for cube }CubeDrill_Employee
+5464   []   INFO   2016-10-18 08:30:23.017   TM1.Cube    Loading body for cube }CubeDrill_General Ledger
+5464   []   INFO   2016-10-18 08:30:23.017   TM1.Cube    Done loading body for cube }CubeDrill_General Ledger
+5464   []   INFO   2016-10-18 08:30:23.017   TM1.Cube    Loading body for cube }DimensionCaptions
+5464   []   INFO   2016-10-18 08:30:23.017   TM1.Cube    Done loading body for cube }DimensionCaptions
+5464   []   INFO   2016-10-18 08:30:23.018   TM1.Cube    Loading body for cube }ElementCaptions
+5464   []   INFO   2016-10-18 08:30:23.018   TM1.Cube    Done loading body for cube }ElementCaptions
+5464   []   INFO   2016-10-18 08:30:23.018   TM1.Cube    Loading body for cube }ElementCaptionsByDimension
+5464   []   INFO   2016-10-18 08:30:23.018   TM1.Cube    Done loading body for cube }ElementCaptionsByDimension
+5464   []   INFO   2016-10-18 08:30:23.019   TM1.Cube    Loading body for cube }ElementSecurity_Account
+5464   []   INFO   2016-10-18 08:30:23.020   TM1.Cube    Done loading body for cube }ElementSecurity_Account
+5464   []   INFO   2016-10-18 08:30:23.021   TM1.Cube    Loading body for cube }ElementSecurity_Currency From
+5464   []   INFO   2016-10-18 08:30:23.021   TM1.Cube    Done loading body for cube }ElementSecurity_Currency From
+5464   []   INFO   2016-10-18 08:30:23.021   TM1.Cube    Loading body for cube }ElementSecurity_Currency Measure
+5464   []   INFO   2016-10-18 08:30:23.021   TM1.Cube    Done loading body for cube }ElementSecurity_Currency Measure
+5464   []   INFO   2016-10-18 08:30:23.021   TM1.Cube    Loading body for cube }ElementSecurity_Employee Measure
+5464   []   INFO   2016-10-18 08:30:23.021   TM1.Cube    Done loading body for cube }ElementSecurity_Employee Measure
+5464   []   INFO   2016-10-18 08:30:23.021   TM1.Cube    Loading body for cube }ElementSecurity_Organization
+5464   []   INFO   2016-10-18 08:30:23.022   TM1.Cube    Done loading body for cube }ElementSecurity_Organization
+5464   []   INFO   2016-10-18 08:30:23.022   TM1.Cube    Loading body for cube }ElementSecurity_Planning Measure
+5464   []   INFO   2016-10-18 08:30:23.022   TM1.Cube    Done loading body for cube }ElementSecurity_Planning Measure
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Loading body for cube }ElementSecurity_Product Measure
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Done loading body for cube }ElementSecurity_Product Measure
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Loading body for cube }ElementSecurity_Retail Measure
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Done loading body for cube }ElementSecurity_Retail Measure
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Loading body for cube }ElementSecurity_Version
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Done loading body for cube }ElementSecurity_Version
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Loading body for cube }ElementSecurity_Year
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Done loading body for cube }ElementSecurity_Year
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Loading body for cube }ElementSecurity_}tp_applications
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Done loading body for cube }ElementSecurity_}tp_applications
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Loading body for cube }formatTesterCube
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Done loading body for cube }formatTesterCube
+5464   []   INFO   2016-10-18 08:30:23.023   TM1.Cube    Loading body for cube }PickList_General Ledger
+5464   []   INFO   2016-10-18 08:30:23.024   TM1.Cube    Done loading body for cube }PickList_General Ledger
+5464   []   INFO   2016-10-18 08:30:23.024   TM1.Cube    Loading body for cube }ProcessSecurity
+5464   []   INFO   2016-10-18 08:30:23.024   TM1.Cube    Done loading body for cube }ProcessSecurity
+5464   []   INFO   2016-10-18 08:30:23.024   TM1.Cube    Loading body for cube }StatsByChore
+5464   []   INFO   2016-10-18 08:30:23.025   TM1.Cube    Done loading body for cube }StatsByChore
+5464   []   INFO   2016-10-18 08:30:23.025   TM1.Cube    Loading body for cube }StatsByClient
+5464   []   INFO   2016-10-18 08:30:23.025   TM1.Cube    Done loading body for cube }StatsByClient
+5464   []   INFO   2016-10-18 08:30:23.025   TM1.Cube    Loading body for cube }StatsByCube
+5464   []   INFO   2016-10-18 08:30:23.026   TM1.Cube    Done loading body for cube }StatsByCube
+5464   []   INFO   2016-10-18 08:30:23.026   TM1.Cube    Loading body for cube }StatsByCubeByClient
+5464   []   INFO   2016-10-18 08:30:23.026   TM1.Cube    Done loading body for cube }StatsByCubeByClient
+5464   []   INFO   2016-10-18 08:30:23.026   TM1.Cube    Loading body for cube }StatsByProcess
+5464   []   INFO   2016-10-18 08:30:23.026   TM1.Cube    Done loading body for cube }StatsByProcess
+5464   []   INFO   2016-10-18 08:30:23.027   TM1.Cube    Loading body for cube }StatsForServer
+5464   []   INFO   2016-10-18 08:30:23.027   TM1.Cube    Done loading body for cube }StatsForServer
+5464   []   INFO   2016-10-18 08:30:23.027   TM1.Cube    Loading body for cube }SysControlCube
+5464   []   INFO   2016-10-18 08:30:23.027   TM1.Cube    Done loading body for cube }SysControlCube
+5464   []   INFO   2016-10-18 08:30:23.028   TM1.Cube    Loading body for cube }SysControlDimension
+5464   []   INFO   2016-10-18 08:30:23.028   TM1.Cube    Done loading body for cube }SysControlDimension
+5464   []   INFO   2016-10-18 08:30:23.028   TM1.Cube    Loading body for cube }tp_application_cubes
+5464   []   INFO   2016-10-18 08:30:23.028   TM1.Cube    Done loading body for cube }tp_application_cubes
+5464   []   INFO   2016-10-18 08:30:23.028   TM1.Cube    Loading body for cube }tp_central_application_state
+5464   []   INFO   2016-10-18 08:30:23.028   TM1.Cube    Done loading body for cube }tp_central_application_state
+5464   []   INFO   2016-10-18 08:30:23.029   TM1.Cube    Loading body for cube }tp_process_errors
+5464   []   INFO   2016-10-18 08:30:23.029   TM1.Cube    Done loading body for cube }tp_process_errors
+5464   []   INFO   2016-10-18 08:30:23.029   TM1.Cube    Loading body for cube }tp_semaphore
+5464   []   INFO   2016-10-18 08:30:23.029   TM1.Cube    Done loading body for cube }tp_semaphore
+5464   []   INFO   2016-10-18 08:30:23.038   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube 'Currency Exchange Rates'.
+5464   []   INFO   2016-10-18 08:30:23.064   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube 'Currency Exchange Rates'.
+5464   []   INFO   2016-10-18 08:30:23.064   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube 'Employee'.
+5464   []   INFO   2016-10-18 08:30:24.699   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube 'Employee'.
+5464   []   INFO   2016-10-18 08:30:24.699   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube 'General Ledger'.
+5276   []   INFO   2016-10-18 08:30:25.909   TM1.Server    Notifying the Admin server
+6036   []   INFO   2016-10-18 08:30:25.998   TM1.Server   Starting Admin Server poller thread. Thread Id: 6036. For Admin server: VCLASSBASE, LocalServer: False
+5464   []   INFO   2016-10-18 08:30:30.043   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube 'General Ledger'.
+5464   []   INFO   2016-10-18 08:30:30.044   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube 'Planning Assumptions'.
+5464   []   INFO   2016-10-18 08:30:30.044   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube 'Planning Assumptions'.
+5464   []   INFO   2016-10-18 08:30:30.044   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube 'Product Type by Region'.
+5464   []   INFO   2016-10-18 08:30:30.060   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube 'Product Type by Region'.
+5464   []   INFO   2016-10-18 08:30:30.060   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube 'Product'.
+5464   []   INFO   2016-10-18 08:30:30.060   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube 'Product'.
+5464   []   INFO   2016-10-18 08:30:30.060   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube 'Retail'.
+5464   []   INFO   2016-10-18 08:30:31.677   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube 'Retail'.
+5464   []   INFO   2016-10-18 08:30:31.677   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube 'Sales Quota'.
+5464   []   INFO   2016-10-18 08:30:31.677   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube 'Sales Quota'.
+5464   []   INFO   2016-10-18 08:30:31.677   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube 'System Info'.
+5464   []   INFO   2016-10-18 08:30:31.677   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube 'System Info'.
+5464   []   INFO   2016-10-18 08:30:31.677   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube 'Wholesale'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube 'Wholesale'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}CellSecurity_General Ledger'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}CellSecurity_General Ledger'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}CubeCaptions'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}CubeCaptions'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}CubeDrill_Employee'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}CubeDrill_Employee'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}CubeDrill_General Ledger'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}CubeDrill_General Ledger'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}DimensionCaptions'.
+5464   []   INFO   2016-10-18 08:30:47.142   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}DimensionCaptions'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}ElementAttributes_Department'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}ElementAttributes_Department'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}ElementAttributes_Employee'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}ElementAttributes_Employee'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}ElementCaptions'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}ElementCaptions'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}ElementCaptionsByDimension'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}ElementCaptionsByDimension'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}PickList_General Ledger'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}PickList_General Ledger'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Computing feeders for base cube '}StatsByClient'.
+5464   []   INFO   2016-10-18 08:30:47.143   TM1.Server   TM1CubeImpl::ProcessFeeders: Done computing feeders for base cube '}StatsByClient'.
+4976   []   INFO   2016-10-18 08:30:47.986   TM1.Server   Starting PseudoElement thread.  Thread Id: 4976
+3940   []   INFO   2016-10-18 08:30:47.989   TM1.Server   Starting RebuildFacetModel thread.  Thread Id: 3940
+5948   []   INFO   2016-10-18 08:30:47.994   TM1.Server   Starting spy thread.  Thread Id: 5948
+5464   []   INFO   2016-10-18 08:30:47.998   TM1.Chore   Registering chore: CXTM1SaveDataAll  Start time: 2011/02/16 11:00:00  Frequency: 01:00:00:00
+5464   []   INFO   2016-10-18 08:30:47.999   TM1.Chore   Registering chore: Save Data - Evening  Start time: 2015/10/25 08:00:00  Frequency: 01:00:00:00
+5464   []   INFO   2016-10-18 08:30:47.999   TM1.Chore   Registering chore: Save Data - Lunch  Start time: 2015/10/25 01:35:00  Frequency: 01:00:00:00
+5464   []   INFO   2016-10-18 08:30:47.999   TM1.Chore   Registering chore: Save Data - Morning  Start time: 2015/10/25 20:00:00  Frequency: 01:00:00:00
+5464   []   INFO   2016-10-18 08:30:48.000   TM1.Server   TM1 Server load time (secs) = 28
+5276   []   INFO   2016-10-18 08:30:50.986   TM1.Server    TM1 Server is ready
+5276   []   INFO   2016-10-18 09:13:51.772   TM1.Server   Closing...
+5276   []   INFO   2016-10-18 09:14:01.189   TM1.Server   Saving...
+5276   []   INFO   2016-10-18 09:14:01.189   TM1.Server   The server is coming down...
+5276   []   INFO   2016-10-18 09:14:01.193   TM1.Server   TM1ServerImpl::Destroy: disconnect clients
+5276   []   INFO   2016-10-18 09:14:01.193   TM1.Server   TM1ServerImpl::Destroy: Deactive all chores
+6036   []   INFO   2016-10-18 09:14:01.196   TM1.Server   Terminating Admin Server poller thread.
+5276   []   INFO   2016-10-18 09:14:01.196   TM1.Server   TM1ServerImpl::Destroy: Save server data
+5276   []   INFO   2016-10-18 09:14:01.219   TM1.Server   TM1ServerImpl::Destroy: destroy chores
+5276   []   INFO   2016-10-18 09:14:01.219   TM1.Server   TM1ServerImpl::Destroy: destroy processes
+5276   []   INFO   2016-10-18 09:14:01.228   TM1.Server   TM1ServerImpl::Destroy: destroy blobs
+5276   []   INFO   2016-10-18 09:14:01.228   TM1.Server   TM1ServerImpl::Destroy: destroy sets
+5276   []   INFO   2016-10-18 09:14:01.228   TM1.Server   TM1ServerImpl::Destroy: destroy groups
+5276   []   INFO   2016-10-18 09:14:01.228   TM1.Server   TM1ServerImpl::Destroy: destroy clients
+5276   []   INFO   2016-10-18 09:14:01.230   TM1.Server   TM1ServerImpl::Destroy: destroy cubes
+5276   []   INFO   2016-10-18 09:14:01.236   TM1.Server   TM1ServerImpl::Destroy: destroy dimensions
+5276   []   INFO   2016-10-18 09:14:01.245   TM1.Server   TM1ServerImpl::Destroy: destroy connections
+5276   []   INFO   2016-10-18 09:14:01.245   TM1.Server   TM1ServerImpl::Destroy: Destroy unregistered objects
+5276   []   INFO   2016-10-18 09:14:01.245   TM1.Server   TM1ServerImpl::Destroy: Commit changes
+5276   []   INFO   2016-10-18 09:14:01.310   TM1.Server   Server shutdown

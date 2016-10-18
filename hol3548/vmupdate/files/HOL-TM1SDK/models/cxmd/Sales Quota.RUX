@@ -1,0 +1,8 @@
+﻿FORMAT==100
+#Region System
+FEEDSTRINGS;
+SKIPCHECK;
+UNDEFVALS;
+#EndRegion
+
+FEEDERS;

@@ -1,0 +1,16 @@
+﻿FORMAT==100
+SKIPCHECK;
+FEEDSTRINGS;
+UNDEFVALS;
+
+['Currency To':'USD'] = N: STET;
+['Currency From':'USD'] = N: STET;
+
+['Spot Rate']= N:
+    DB('Currency Exchange Rates',!Version,!Year,!Period,!Currency From,'USD',!Currency Measure)
+    *
+    DB('Currency Exchange Rates',!Version,!Year,!Period,'USD',!Currency To,!Currency Measure);
+
+FEEDERS;
+
+['Currency From':'USD','Spot Rate']=>['Currency From':'All Currencies'];

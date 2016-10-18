@@ -1,0 +1,4 @@
+﻿FILE_FORMAT=100
+ENTRYNAME=Operating Profit
+ENTRYTYPE=subset
+ENTRYREFERENCE=TM1:///SUBSET/PUBLIC/Account/Operating Profit

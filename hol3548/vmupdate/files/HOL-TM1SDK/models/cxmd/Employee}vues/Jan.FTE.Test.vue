@@ -1,0 +1,81 @@
+﻿389,100
+390,"Jan.FTE.Test"
+370,0
+361,1
+362,1
+363,0
+364,0
+365,
+366,
+367,0
+376,1
+375,b:#,##0CO|0|
+374,5
+7,Period
+6,ALL
+274,Short Description
+281,0
+282,
+7,Year
+6,Default
+7,Currency
+6,Default
+7,Region
+6,Default
+7,Department
+6,Default
+360,2
+7,Version
+270,2
+1
+2
+274,Description
+275,
+281,0
+282,
+7,Employee Measure
+270,6
+Enter Full Time Base Salary
+Full Time Base Salary
+FTE
+Total Salary Costs
+Base Salary
+Oncosts
+274,
+275,
+281,0
+282,
+371,1
+7,Employee
+6,ALL
+274,Full Name
+281,0
+282,
+373,5
+2,01
+1,2012
+1,Local
+13,11
+3,2
+372,0
+372,00
+384,0
+385,0
+377,4
+146
+163
+1372
+729
+378,0
+382,255
+379,8
+0
+0
+0
+0
+0
+0
+0
+0
+11,20160707013503
+381,0

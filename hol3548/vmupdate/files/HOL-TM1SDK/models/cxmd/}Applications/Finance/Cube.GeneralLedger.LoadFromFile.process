@@ -1,0 +1,4 @@
+﻿FILE_FORMAT=100
+ENTRYNAME=Cube.GeneralLedger.LoadFromFile
+ENTRYTYPE=process
+ENTRYREFERENCE=TM1:///PROCESS/PUBLIC/Cube.GeneralLedger.LoadFromFile

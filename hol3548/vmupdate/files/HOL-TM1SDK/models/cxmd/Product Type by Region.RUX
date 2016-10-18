@@ -1,0 +1,23 @@
+﻿FORMAT==100
+SKIPCHECK;
+FEEDSTRINGS;
+UNDEFVALS;
+### FOREIGN EXCHANGE RULES
+#------------Currency Conversion----------------------------------------------
+# Use the Attribute of the region to work out what the local currency is
+# Use the Currency dimension as "Currency To" in the FX cube
+
+[]= N:
+  IF(!Currency @= 'Local',
+    STET
+    ,
+    ['Local']
+    *
+    DB('Currency Exchange Rates',!Version,!Year,!Period,
+          AttrS('Region', !Region, 'Currency'),
+          !Currency,'Spot Rate')
+  );
+
+FEEDERS;
+# Currency Conversion
+['Local'] => ['All Currencies'];

@@ -1,0 +1,4 @@
+﻿FORMAT==100
+SKIPCHECK;
+
+[] = S: 'source table,transactions';

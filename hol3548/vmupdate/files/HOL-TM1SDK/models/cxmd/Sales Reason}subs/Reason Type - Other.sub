@@ -1,0 +1,21 @@
+﻿283,100
+284,Reason Type - Other
+11,20130904035542
+274,
+18,0
+275,100
+{TM1SORT( {FILTER( {TM1SUBSETALL( [Sales Reason] )}, [Sales Reason].[Reason Type] = "Other")}, ASC)}
+278,0
+281,0
+270,11
+Price
+On Promotion
+Magazine Advertisement
+Television  Advertisement
+Manufacturer
+Review
+Demo Event
+Sponsorship
+Quality
+Other
+Total Sales Reason

@@ -1,0 +1,126 @@
+﻿FORMAT==100
+FEEDSTRINGS;
+SKIPCHECK;
+UNDEFVALS;
+
+#------------Actual Local---
+['Actual', 'Local']= N: STET;
+
+['Last Year'] = N: DB('General Ledger','Actual', ATTRS('Year', !Year, 'Year-1'),!Period,!Currency,!Region,!Department,!Account,!General Ledger Measure);
+
+['Var %'] = (['Budget'] - ['Actual']) \ ['Budget'];
+['LY %'] = (['Last Year'] - ['Actual']) \ ['Last Year'];
+
+### PAYROLL TAX
+#------------Payroll tax driven by salaries
+['Local', 'Payroll Taxes', 'Amount']= N:
+  ['Salaries'] * DB('Regional Assumptions',!Version,!Year,!Period,!Region,'Payroll Tax Rate');
+
+### FETCH VALUES FROM OTHER CUBES
+#------------Link Sales in the Retail Cube to the GL--------------------------------------------------------------------
+#['Local','Sales and Marketing','Trade Sales','Amount'] = N:
+#  DB('Retail',!Version,!Year,!Period,!Currency,!Region,'All Products by Category','Sales Amount')
+#  +  DB('Wholesale',!Version,!Year,!Period,!Currency, 'All Employees By Dept', !Region, 'All Resellers', 'All Products by Category', 'Sales Amount');
+
+['Local','Sales and Marketing', 'Standard Cost of Sales', 'Amount'] = N:
+  DB('Retail',!Version,!Year,!Period,!Currency,!Region,'All Products by Category','Freight');
+
+#------------Link Salaries in the Employee Cube to the GL---------------------------------------------------------------------
+['Local', 'Salaries','Amount'] = N:
+  DB('Employee', !Version, !Year, !Period, !Currency, !Region, !Department, 'All Employees By Dept', 'Total Salary Costs');
+#-----
+
+### PLANNING RULES
+
+#------------Base Amount------------------------------------------------------------------------------
+# This rule works out the base amount on which to base the budget
+# Only do calculations for the year and version that needs planning, as set in the System Info cube
+# Note that in the System Info cube, for the Budget Version you need to enter the version description (e.g. Actual, Budget etc, not the code number)
+# In the System Info cube, for the Budget Version, enter the principal element name e.g. 2013, not the alias 2012/2013
+
+['Local', 'Base Amount']= N:
+  IF(AttrS('Version', !Version, 'Description') @= DB('System Info','Budget Version','String') & !Year @= DB('System Info','Budget Year','String'),
+
+    IF(DB('Planning Assumptions',!Version,!Year,!Department,!Account,'Bgt Calc Method') @= 'FY % to Sales LY'
+       %
+       DB('CC Yearly Assumptions',!Version,!Year,!Department,!Account,'Bgt Calc Method')@= 'FY % to Sales by Input'
+       ,
+       ['Year','Trade Sales']
+       ,
+       IF(DB('Planning Assumptions',!Version,!Year, !Department,!Account,'Bgt Calc Method')@= 'FY % Growth'
+          ,
+          DB('General Ledger',
+                                           DB('System Info','Budget Base Version','String'),
+                                                                                                                       DB('System Info','Budget Base Year','String'),
+                                                                                                                                                                                              'Year', !Currency,!Region,!Department,!Account,'Amount')
+          ,
+          IF(DB('Planning Assumptions',!Version,!Year,!Department,!Account,'Bgt Calc Method') @= 'Mthly % Growth'
+             ,
+             DB('General Ledger',
+                                             DB('System Info','Budget Base Version','String'),
+                                                                                                                         DB('System Info','Budget Base Year','String'),
+                                                                                                                                                                                                !Period, !Currency,!Region,!Department,!Account,'Amount')
+
+
+            ,
+            IF(DB('CC Yearly Assumptions',!Version,!Year, !Department, !Account,'Bgt Calc Method')@= 'Mthly % to Sales by Input'
+               %
+               DB('CC Yearly Assumptions',!Version,!Year, !Department, !Account,'Bgt Calc Method')@= 'Mthly % to Sales LY'
+               ,
+               ['Trade Sales']
+               ,
+               STET
+            )
+         )
+      )
+    )
+  ,STET
+  );
+
+#------------Factor---------------------------------------------------------------------------------------
+# This rule works out the factor to multiply the base by
+# The factor may be a growth factor or a % of sales depending on the calculation method
+
+['Local', 'Factor']= N:
+  IF(AttrS('Version', !Version, 'Description') @= DB('System Info','Budget Version','String') & !Year @= DB('System Info','Budget Year','String'),
+   DB('Planning Assumptions',!Version,!Year,!Department,!Account,
+         DB('Planning Assumptions',!Version,!Year,!Department,!Account,'Bgt Calc Method'))
+  ,STET
+  );
+
+### FOREIGN EXCHANGE RULES
+#------------Currency Conversion----------------------------------------------
+# Use the Attribute of the region to work out what the local currency is
+# Use the Currency dimension as "Currency To" in the FX cube
+
+[]= N:
+  IF(!Currency @= 'Local',
+    STET
+    ,
+    ['Local']
+    *
+    DB('Currency Exchange Rates',!Version,!Year,!Period,
+          AttrS('Region', !Region, 'Currency'),
+          !Currency,'Spot Rate')
+  );
+
+FEEDERS;
+
+['Actual'] => DB('General Ledger','Last Year', ATTRS('Year', !Year, 'Year+1'),!Period,!Currency,!Region,!Department,!Account,!General Ledger Measure);
+['Budget'] => ['Var %'];
+['Last Year'] => ['LY %'];
+
+# Feeder for payroll tax
+['Local', 'Salaries', 'Amount'] => ['Payroll Taxes'];
+
+# Currency Conversion
+['Local'] => ['All Currencies'];
+
+# Feeders for FETCHING VALUES FROM OTHER CUBES are in the other cubes
+
+# Feeders for planning rules
+# Feed the budget version and year, as set in the System Info cube
+
+# Feeding the Planning Measures Consolidation in the General Ledger Measure dimension feeds its children: Base Amount, Factor, Phasing and Amount
+# Feeding 'Year' in the Period Dimension feeds all the months of the year
+# This is necessary because an annual total may be spread to all months even though some months may be 0 in the base annual total

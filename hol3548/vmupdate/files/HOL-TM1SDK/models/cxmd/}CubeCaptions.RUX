@@ -1,0 +1,11 @@
+﻿FORMAT==100
+['Value'] = S:
+  IF(
+    DB( '}CubeCaptions', !}Cultures, 'Input' ) @= '',
+    IF(
+      ATTRS( '}Cultures', !}Cultures, 'BaseCulture' ) @= '',
+      DB( '}CubeCaptions', 'Default', 'Input' ),
+      DB( '}CubeCaptions', ATTRS( '}Cultures', !}Cultures, 'BaseCulture' ), 'Value' )
+    ),
+    DB( '}CubeCaptions', !}Cultures, 'Input' )
+  );

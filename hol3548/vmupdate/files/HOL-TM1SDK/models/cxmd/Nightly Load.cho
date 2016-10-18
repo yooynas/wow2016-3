@@ -1,0 +1,20 @@
+﻿534,10
+535,"Nightly Load"
+530,20151231130000
+537,0
+531,001000000
+532,4
+13,16
+6,"Dim.Account.LoadFromFile"
+560,0
+13,16
+6,"Dim.Product.LoadFromFile"
+560,0
+13,16
+6,"Dim.Employee.LoadFromFile"
+560,0
+13,16
+6,"Cube.Employee.LoadFromFile"
+560,0
+533,0
+1405,0

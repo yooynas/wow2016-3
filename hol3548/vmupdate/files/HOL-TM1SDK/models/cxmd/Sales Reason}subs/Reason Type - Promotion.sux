@@ -1,0 +1,15 @@
+﻿283,100
+284,Reason Type - Promotion
+11,20130904035542
+274,
+18,0
+275,87
+{FILTER( {TM1SUBSETALL( [Sales Reason] )}, [Sales Reason].[Reason Type] = "Promotion")}
+278,0
+281,0
+270,5
+Manufacturer
+Other
+Price
+Quality
+Review
